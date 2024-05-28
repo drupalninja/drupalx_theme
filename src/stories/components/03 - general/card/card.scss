@@ -1,0 +1,13 @@
+// Import site utilities.
+@import '../../../global/bootstrap-init';
+
+// Include button styles.
+@import '../button/button';
+
+// Include Card styles.
+@import './node_modules/bootstrap/scss/card';
+
+/* Make img 100% width. */
+.card img {
+  width: 100%;
+}

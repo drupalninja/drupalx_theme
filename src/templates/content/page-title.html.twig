@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Theme override for page titles.
+ *
+ * Available variables:
+ * - title_attributes: HTML attributes for the page title element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title: The page title, for use in the actual content.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ */
+#}
+{% if title %}
+  <div class="container {{ hide ? 'd-none' : '' }} mb-8">
+    {%
+      include '@drupalx_theme/03 - general/heading/heading.twig' with {
+        "heading": {
+          "title": title,
+          "heading_level": 1,
+          "modifier": "display-2"
+        }
+      } only
+    %}
+  </div>
+{% endif %}

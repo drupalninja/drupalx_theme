@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'mb-6 mb-lg-12',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  <div{{ content_attributes.addClass('container') }}>
+    <div class="mb-7 rounded shadow">
+      {{ content.field_media }}
+    </div>
+
+    <div class="col-lg-10 col-xl-8 mx-auto mb-10">
+      {% if content.field_subhead %}
+        <div class="text-dark text-uppercase mb-2 fs-7">
+          {{ content.field_subhead }}
+        </div>
+      {% endif %}
+
+      {{ title_prefix }}
+      {%
+        include '@drupalx_theme/03 - general/heading/heading.twig' with {
+          "heading": {
+            "title": label,
+            "heading_level": 1,
+            "modifier": "mb-2 text-secondary display-3"
+          }
+        } only
+      %}
+      {{ title_suffix }}
+
+      {% if content.field_lead %}
+        <div class="lead">
+          {{ content.field_lead }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="col-lg-10 col-xl-7 mx-auto">
+      {{ content|without('field_subhead', 'field_lead', 'field_tags', 'field_authors', 'field_media') }}
+    </div>
+  </div>
+</article>

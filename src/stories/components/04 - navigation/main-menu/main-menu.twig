@@ -1,0 +1,80 @@
+{#
+/**
+ * @file
+ * Custom Bootstrap main menu implementation.
+#}
+{{ attach_library('drupalx_theme/main-menu') }}
+
+{% import _self as menus %}
+
+<nav class="navbar navbar-expand-lg bg-primary py-2 {{ modifier }}" data-bs-theme="dark">
+	<div class="container">
+		<a class="navbar-brand" href="/">
+			<img src="{{ site_logo }}" alt="{{ site_name }}" class="d-inline-block" style="margin-right: 4px;">
+		</a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+			<div class="d-flex justify-content-end p-2 pb-0">
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				{{ menus.build_menu(items, attributes, 0, false) }}
+			</div>
+		</div>
+
+		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+			{{ menus.build_menu(items, attributes, 0, true) }}
+
+			{% macro build_menu(items, attributes, menu_level, is_desktop) %}
+				{% import _self as menus %}
+				{% if items %}
+					{% if menu_level == 0 %}
+						<ul class="navbar-nav mr-auto {{ is_desktop ? 'nav-desktop gap-4' : '' }}">
+						{% else %}
+							<ul class="dropdown-menu">
+							{% endif %}
+							{% for item in items %}
+								{{ menus.add_link(item, attributes, menu_level) }}
+							{% endfor %}
+						</ul>
+					{% endif %}
+				{% endmacro %}
+
+				{% macro add_link(item, attributes, menu_level) %}
+					{% import _self as menus %}
+					{%
+          set list_item_classes = [
+          'nav-item',
+          item.is_expanded ? 'dropdown'
+        ]
+        %}
+					{%
+          set link_class = [
+            menu_level == 0 ? 'nav-link fs-5',
+            menu_level == 0 and (item.is_expanded or item.is_collapsed) ? 'dropdown-toggle',
+            menu_level > 0 ? 'dropdown-item',
+						item.in_active_trail ? 'active' : ''
+          ]
+        %}
+					{%
+          set toggle_class = [
+          ]
+        %}
+        <li class="{{ list_item_classes|join(' ') }}">
+          {% if menu_level == 0 and item.below %}
+            <a href="{{ item.url }}" class="{{ link_class|join(' ') }}" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="{{ 'Expand menu'|t }} {{ item.title }}">{{ item.title }}</a>
+            {{ menus.build_menu(item.below, attributes, menu_level + 1) }}
+          {% else %}
+            <a href="{{ item.url }}" class="{{ link_class|join(' ') }}">{{ item.title }}</a>
+          {% endif %}
+        </li>
+      {% endmacro %}
+    </div>
+  </div>
+</nav>
+

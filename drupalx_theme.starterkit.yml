@@ -1,0 +1,7 @@
+ignore:
+  - '/src/StarterKit.php'
+  - '/drupalx_theme.starterkit.yml'
+no_edit: []
+no_rename: []
+info:
+  version: 1.0.0

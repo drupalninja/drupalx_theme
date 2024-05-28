@@ -1,0 +1,14 @@
+<div class="accordion-item">
+  <h2 class="accordion-header" id="heading{{ item.accordion_instance }}">
+    <button class="accordion-button collapsed p-3 pt-4 pb-4 fs-5 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ item.accordion_instance }}" aria-expanded="false" aria-controls="collapse{{ item.accordion_instance }}">
+      {{ item.heading }}
+    </button>
+  </h2>
+  <div id="collapse{{ item.accordion_instance }}" class="accordion-collapse collapse" aria-labelledby="heading{{ item.accordion_instance }}">
+    <div class="accordion-body">
+      {% block accordion_content %}
+        {{ item.content }}
+      {% endblock %}
+    </div>
+  </div>
+</div>

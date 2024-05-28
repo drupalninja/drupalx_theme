@@ -1,0 +1,16 @@
+{{ attach_library('drupalx_theme/breadcrumb') }}
+
+{% if breadcrumb %}
+  <nav aria-label="breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
+    <ol class="breadcrumb">
+      {% for item in breadcrumb %}
+        {% if item.url %}
+          <li class="breadcrumb-item"><a href="{{ item.url }}">{{ item.text }}</a>
+        {% else %}
+          <li class="breadcrumb-item active" aria-current="page">{{ item.text }}</li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  </nav>
+{% endif %}

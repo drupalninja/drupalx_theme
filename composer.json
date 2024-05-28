@@ -1,0 +1,12 @@
+{
+  "name": "drupalninja/drupalx_theme",
+  "description": "DrupalX Bootstrap, Storybook starter theme.",
+  "type": "drupal-theme",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Jay Callicott",
+      "role": ""
+    }
+  ]
+}

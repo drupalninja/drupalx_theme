@@ -1,0 +1,37 @@
+{{ attach_library('drupalx_theme/card-group') }}
+
+{% if section_title %}
+  {%
+    include '@drupalx_theme/03 - general/heading/heading.twig' with {
+      "heading": {
+        "title": section_title,
+        "heading_level": 2,
+        "modifier": ""
+      }
+    } only
+  %}
+{% endif %}
+
+<div class="row mt-4">
+  {% block card_items %}
+    {% for item in items %}
+      <div class="col-sm-6 col-lg-4 mb-4">
+        {% if item.card %}
+          {%
+            include '@drupalx_theme/03 - general/card/card.twig' with {
+              "card": item.card
+            } only
+          %}
+        {% else %}
+          {% include '@drupalx_theme/03 - general/stat/stat.twig' with {
+              modifier: item.modifier,
+              media: item.media,
+              heading: item.heading,
+              body: item.body,
+            } only
+          %}
+        {% endif %}
+      </div>
+    {% endfor %}
+  {% endblock %}
+</div>

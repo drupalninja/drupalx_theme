@@ -1,0 +1,16 @@
+{{ attach_library('drupalx_theme/carousel') }}
+
+<div id="carousel{{ id }}" class="carousel-single carousel slide" data-bs-ride="carousel" >
+  <div class="carousel-inner">
+    {% block carousel_items %}
+      {% for item in list %}
+        {%
+          include '@drupalx_theme/01 - editorial/carousel/carousel-item.twig' with {
+            "id": id,
+            "item": item
+          } only
+        %}
+      {% endfor %}
+    {% endblock %}
+  </div>
+</div>

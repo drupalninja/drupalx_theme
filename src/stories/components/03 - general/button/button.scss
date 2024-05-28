@@ -1,0 +1,10 @@
+// Import site utilities.
+@import '../../../global/bootstrap-init';
+
+.btn {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1;
+  width: fit-content;
+}

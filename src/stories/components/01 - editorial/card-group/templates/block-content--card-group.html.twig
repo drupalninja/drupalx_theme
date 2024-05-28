@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block content.
+ *
+ * @see template_preprocess_block_content_template()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'block-content',
+    'block-content--type-' ~ bundle|clean_class,
+    'block-content--' ~ id,
+    'block-content--view-mode-' ~ view_mode|clean_class,
+    'container',
+    'mb-12',
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% block content %}
+    {% embed '@drupalx_theme/01 - editorial/card-group/card-group.twig' with { section_title: content.field_title|field_value, content: content } only %}
+      {% block card_items %}
+        {% for i in content.field_card['#items'] %}
+          <div class="col-sm-6 col-lg-4 mb-4">
+            {{ content.field_card[loop.index0] }}
+          </div>
+        {% endfor %}
+      {% endblock %}
+    {% endembed %}
+  {% endblock %}
+</div>

@@ -1,0 +1,249 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the drupalx_theme theme.
+ */
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_preprocess_page_title().
+ */
+function drupalx_theme_preprocess_page_title(&$variables) {
+  $node = \Drupal::request()->attributes->get('node');
+
+  // Override page title for layout content type.
+  if ($node && $node->bundle() == 'layout') {
+
+    // If the page title is hidden, set it to empty.
+    if ($node->hasField('field_hide_page_title') && !empty($node->get('field_hide_page_title')->value)) {
+      $variables['hide'] = TRUE;
+    }
+  }
+  // Hide page title on article and page node pages.
+  elseif ($node && $node->bundle() == 'article' || $node && $node->bundle() == 'page') {
+    $variables['title'] = '';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraphs.
+ */
+function drupalx_theme_preprocess_paragraph(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+
+  $parent = $paragraph->getParentEntity();
+
+  // Add parent as a variable.
+  if (isset($parent)) {
+    $variables['parent'] = $parent;
+  }
+
+  $paragraph_preprocess_function = 'drupalx_theme_preprocess_paragraph__' . $paragraph->bundle();
+  if (function_exists($paragraph_preprocess_function)) {
+    $paragraph_preprocess_function($variables);
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for search_api_page_block_form_search_results().
+ */
+function drupalx_theme_form_search_api_page_block_form_search_results_alter(&$form, $form_state, $form_id) {
+  // Remove the 'invisible' option on the label.
+  unset($form['keys']['#title_display']);
+
+  // Let the CSS more easily adjust the size of the field.
+  unset($form['keys']['#size']);
+
+  // Change the title of the keywords field.
+  $form['keys']['#title'] = t('Search term(s)');
+
+  // Adding placeholder to text search field.
+  $form['keys']['#attributes']['placeholder'] = t('Search Site');
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for 'input'.
+ */
+function drupalx_theme_theme_suggestions_input_alter(array &$suggestions, array $variables) {
+  // On submit buttons, add a theme suggestion that appends the submit button's
+  // label to the filename, e.g. if the submit button is "Search" then the file
+  // suggestion becomes "input__submit__search".
+  if ($variables['theme_hook_original'] == 'input__submit') {
+    if (!empty($variables['element']['#value'])) {
+      $title = strtolower(Html::cleanCssIdentifier($variables['element']['#value']));
+      $suggestions[] = $variables['theme_hook_original'] . '__' . $title;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function drupalx_theme_preprocess_html(array &$variables) {
+
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function drupalx_theme_page_attachments_alter(array &$page) {
+
+}
+
+/**
+ * Implements hook_preprocess_page() for page.html.twig.
+ */
+function drupalx_theme_preprocess_page(array &$variables) {
+  $config = \Drupal::config('system.site');
+  $variables['site_name'] = $config->get('name');
+  $variables['current_year'] = date('Y');
+
+  // Get theme logo.
+  $variables['logo'] = theme_get_setting('logo');
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function drupalx_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_node_alter().
+ */
+function drupalx_theme_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function drupalx_theme_preprocess_block(array &$variables) {
+
+  // Add logo to footer.
+  if (isset($variables['elements']['#id']) && $variables['elements']['#id'] == 'footer') {
+    $theme_path = \Drupal::service('extension.list.theme')->getPath('drupalx_theme');
+    $variables['site_logo'] = '/' . $theme_path . '/static/images/logo.svg';
+  }
+}
+
+/**
+ * Preprocess function for block content template.
+ */
+function drupalx_theme_preprocess_block_content(array &$variables) {
+  $block_content = $variables['elements']['#block_content'];
+
+  if ($block_content->bundle() === 'views') {
+    // Add wrapper to the paragraph views.
+    $views_ref = $block_content->field_views_ref->getValue();
+    $variables['wrapper_class'] = str_replace('-', '_', $views_ref[0]['target_id'] . '-' . $views_ref[0]['display_id'] . '__wrapper');
+  }
+
+  $block_preprocess_function = 'drupalx_theme_preprocess_block_content__' . $block_content->bundle();
+  if (function_exists($block_preprocess_function)) {
+    $block_preprocess_function($variables);
+  }
+}
+
+/**
+ * Implements theme_preprocess_image().
+ */
+function drupalx_theme_preprocess_image(&$variables) {
+  if (!empty($variables['attributes']['class']) && is_string($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = [$variables['attributes']['class']];
+  }
+  $variables['attributes']['class'][] = 'img-fluid rounded w-auto';
+}
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function drupalx_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function drupalx_theme_theme_suggestions_fieldset_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function drupalx_theme_preprocess_node(array &$variables) {
+  if (!empty($variables['elements']['#node']) && is_object($variables['elements']['#node']) && method_exists($variables['elements']['#node'], 'getType')) {
+    // Ensure that the node variable exists and is an object.
+    $function = __FUNCTION__ . '_' . $variables['elements']['#node']->getType();
+    if (function_exists($function)) {
+      $function($variables);
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_views_view_alter().
+ */
+function drupalx_theme_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+}
+
+/**
+ * Implements hook_preprocess_form().
+ */
+function drupalx_theme_preprocess_form(array &$variables) {
+}
+
+/**
+ * Implements hook_preprocess_select().
+ */
+function drupalx_theme_preprocess_select(array &$variables) {
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function drupalx_theme_preprocess_field(array &$variables, $hook) {
+
+}
+
+/**
+ * Implements hook_preprocess_details().
+ */
+function drupalx_theme_preprocess_details(array &$variables) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_details_alter().
+ */
+function drupalx_theme_theme_suggestions_details_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_paragraph_alter().
+ */
+function drupalx_theme_theme_suggestions_paragraph_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function drupalx_theme_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'views_view_unformatted__' . $variables['view']->id() . '__' . $variables['view']->current_display;
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu.html.twig.
+ */
+function drupalx_theme_preprocess_menu(&$variables) {
+  $config = \Drupal::config('system.site');
+  $variables['site_name'] = $config->get('name');
+  $variables['site_logo'] = theme_get_setting('logo.url');
+}

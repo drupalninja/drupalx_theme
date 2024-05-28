@@ -1,0 +1,30 @@
+{{ attach_library('drupalx_theme/modal') }}
+
+{% if trigger_button_text %}
+  <!-- Button trigger modal -->
+  <button type="button" class="btn {{ modifier }}" data-bs-toggle="modal" data-bs-target="#{{ id }}">
+    {{ trigger_button_text }}
+  </button>
+{% endif %}
+
+<div class="modal modal-lg fade" id="{{ id }}" tabindex="-1" aria-labelledby="{{ id }}Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-2">
+      <div class="modal-header pb-0 border-0">
+        <h2 class="modal-title fs-4" id="{{ id }}Label">{{ title }}</h2>
+        <button type="button" class="btn-close p-0" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pb-0 fs-6">
+        {{ body|raw }}
+      </div>
+      <div class="modal-footer border-0">
+        {% if button1.text %}
+          <a type="button" class="btn btn-outline-primary me-2" href="{{ button1.url ?? '#' }}" {{ button1.url is empty ? 'data-bs-dismiss="modal"' : '' }}>{{ button1.text }}</a>
+        {% endif %}
+        {% if button2.text %}
+          <a type="button" class="btn btn-primary" href="{{ button2.url ?? '#' }}" {{ button2.url is empty ? 'data-bs-dismiss="modal"' : '' }}>{{ button2.text }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

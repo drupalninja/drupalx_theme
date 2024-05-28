@@ -1,0 +1,63 @@
+# Generated on 2022-10-24 using generator-mc-d9-theme 2.7.1
+
+# Drupal's .info.yml files allow themers to easily specify some of the static
+# properties of your theme. Properties such as its name, libraries of style
+# sheets and javascripts, and block regions.
+#
+# Drupal 8/9 stores a cache of the data in this .info.yml files. If you modify any
+# lines in this file, you MUST refresh 8/9's cache. You can do this with
+# the "drush cr" command or by simply visiting the Appearance page at
+# admin/appearance.
+
+name: DrupalX Theme
+type: theme
+description: Drupal Bootstrap/Storybook theme starter for DrupalX distribution.
+package: Other
+core_version_requirement: ^9 || ^10
+# Classy vs. Stable as a base theme: https://www.lullabot.com/articles/a-tale-of-two-base-themes-in-drupal-8-core
+base theme: stable9
+version: '1.0'
+starterkit: true
+
+# This section controls the libraries for your theme. For full documentation,
+# see https://www.drupal.org/node/2216195
+
+# The "libraries-extend:" section will allow you to add your own JS or CSS to
+# existing libraries.
+# libraries-extend:
+
+# Disable core layout builder styles
+libraries-override:
+  layout_builder/drupal.layout_builder:
+    css:
+      theme:
+        css/layout-builder.css: false
+        css/off-canvas.css: false
+
+# The "libraries:" section will add a library to _all_ pages.
+libraries:
+  - drupalx_theme/global
+  # Example adding the webfonts library to every page.
+  # See drupalx_theme.libraries.yml for more info.
+  #- drupalx_theme/webfonts
+
+# This section is used by the contrib module, Component Libraries. It allows you
+# to reference .twig files in your sass/ directory by using the Twig namespace:
+# @drupalx_theme
+# See https://www.drupal.org/project/components for more information.
+components:
+  namespaces:
+    drupalx_theme:
+      - src/stories/global
+      - src/stories/components
+      - src/templates
+
+# This section lists the regions defined in the theme (our base theme) default
+# page.html.twig and maintenance-page.html.twig files. The name before
+# the semi-colon is the machine name of the region. The text after the
+# semi-colon is the region's description used on the admin/structure/block page.
+regions:
+  primary_menu: Primary Menu
+  highlighted: Highlighted
+  content: Content
+  footer: Footer

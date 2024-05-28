@@ -1,0 +1,28 @@
+{{ attach_library('drupalx_theme/quote') }}
+
+<div class="text-center d-flex justify-content-center {{ quote.modifier_class }}">
+  <div class="col-lg-10 col-xxxl-6">
+    <div class="row">
+      {% if quote.logo %}
+        <div class="quote-logo col-lg-3 mx-auto mb-2">
+          {{ quote.logo }}
+        </div>
+      {% endif %}
+      <blockquote class="blockquote fs-4 mb-3">
+        <p class="p-3 fw-semibold d-flex align-items-center">
+          {{ quote.quote }}
+          <span class="material-symbols-outlined mb-3">format_quote</span>
+        </p>
+      </blockquote>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="quote-image me-3">
+        {{ quote.image }}
+      </div>
+      <div class="quote-text">
+        <div class="fw-semibold">{{ quote.name }}</div>
+        <p class="fs-6">{{ quote.job }}</p>
+      </div>
+    </div>
+  </div>
+</div>

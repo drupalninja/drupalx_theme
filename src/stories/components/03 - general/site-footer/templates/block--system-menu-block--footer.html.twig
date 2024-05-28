@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{{ attach_library('drupalx_theme/site-footer') }}
+
+{%
+  set classes = [
+    'block',
+    'block-menu',
+  ]
+%}
+
+<div{{attributes.addClass(classes)}}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {% embed '@drupalx_theme/03 - general/site-footer/site-footer.twig' with { content: content, site_logo: site_logo, modifier: "" } only %}
+
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  {% endembed %}
+</div>

@@ -1,0 +1,9 @@
+// Import site utilities.
+@import '../../../global/bootstrap-init';
+
+// Include menu styles.
+@import '../../04 - navigation/menu/menu';
+
+.footer-logo {
+  max-width: 300px;
+}

@@ -1,0 +1,32 @@
+{{ attach_library('drupalx_theme/text-block') }}
+
+{% if body_text %}
+  <div class="row">
+    <div class="col-lg-10">
+      {% if heading %}
+        {%
+          include '@drupalx_theme/03 - general/heading/heading.twig' with {
+            "heading": heading
+          } only
+        %}
+      {% endif %}
+      {%
+        include '@drupalx_theme/03 - general/rich-text/rich-text.twig' with {
+          body_text: body_text,
+        } only
+      %}
+      {% if link.url %}
+        <div class="mt-3">
+          {% include '@drupalx_theme/03 - general/button/button.twig' with {
+            "button": {
+              "url": link.url,
+              "text": link.text ? link.text : 'Read more'|t,
+              "icon": '',
+              "modifier": 'btn-primary',
+            }
+          } only %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,11 @@
+<div class="container">
+  {% for item in items %}
+    {% block search_item %}
+      {%
+        include '@drupalx_theme/06 - content-display/search-results/search-results.item.twig' with {
+          item: item
+        } only
+      %}
+    {% endblock %}
+  {% endfor %}
+</div>

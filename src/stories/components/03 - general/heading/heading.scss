@@ -1,0 +1,10 @@
+// Import site utilities.
+@import '../../../global/bootstrap-init';
+
+.heading {
+
+  strong {
+    color: var(--bs-primary);
+    font-weight: inherit;
+  }
+}

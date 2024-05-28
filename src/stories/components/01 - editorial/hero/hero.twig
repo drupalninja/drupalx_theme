@@ -1,0 +1,70 @@
+{{ attach_library('drupalx_theme/hero') }}
+
+{% import _self as hero %}
+
+<div class="pb-6 pb-lg-12 text-center">
+
+  {% if media and layout == 'image_top' %}
+    {{ hero.render_media(media, layout) }}
+  {% endif %}
+
+  {% if title %}
+    {{
+      include('@drupalx_theme/03 - general/heading/heading.twig', {
+        heading: {
+          title: title,
+          heading_level: 1,
+          modifier: 'display-5 fw-semibold mb-4'
+        }
+      },
+      with_context = false
+    )}}
+  {% endif %}
+
+  <div class="col-lg-6 mx-auto">
+    {% if body_text %}
+      <div class="lead mb-4">
+        {{ body_text }}
+      </div>
+    {% endif %}
+
+    <div class="d-grid gap-2 d-flex justify-content-center">
+      {% if button.url %}
+        {{
+          include('@drupalx_theme/03 - general/button/button.twig', {
+            button: {
+              text: button.text,
+              url: button.url,
+              modifier: 'btn-primary',
+              icon: button.icon
+            }
+          }
+        )}}
+      {% endif %}
+      {% if button2.url %}
+        {{
+          include('@drupalx_theme/03 - general/button/button.twig', {
+            button: {
+              text: button2.text,
+              url: button2.url,
+              modifier: 'btn-outline-primary',
+              icon: button2.icon
+            }
+          }
+        )}}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if media and layout == 'image_bottom' %}
+    {{ hero.render_media(media, layout) }}
+  {% endif %}
+</div>
+
+{% macro render_media(media, layout) %}
+  <div class="row">
+    <div class="{{ layout == 'image_top' ? 'mb-8' : 'mt-8' }} d-flex justify-content-center align-items-center">
+      <div class="shadow rounded">{{ media }}</div>
+    </div>
+  </div>
+{% endmacro %}

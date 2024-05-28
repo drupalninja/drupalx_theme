@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+
+<form{{ attributes.class[0] == 'node-preview-form-select' ? attributes.addClass('container') : attributes.addClass('mb-5') }}>
+  {{ children }}
+</form>

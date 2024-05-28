@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block content.
+ *
+ * @see template_preprocess_block_content_template()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'block-content',
+    'block-content--type-' ~ bundle|clean_class,
+    'block-content--' ~ id,
+    'block-content--view-mode-' ~ view_mode|clean_class,
+    'bg-light mt-5 mt-lg-12 pt-5 pb-5 pt-lg-12 pb-lg-12',
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% block content %}
+    {% if content.field_title %}
+      {%
+        include '@drupalx_theme/03 - general/heading/heading.twig' with {
+          "heading": {
+            "title": content.field_title|field_value,
+            "heading_level": "2",
+            "modifier": "text-dark mb-4 container",
+          },
+        } only
+      %}
+    {% endif %}
+    {% embed '@drupalx_theme/01 - editorial/accordion/accordion.twig' with { content: content, modifier: "container" } only %}
+      {% block accordion_items %}
+        {{ content.field_accordion_item }}
+      {% endblock accordion_items %}
+    {% endembed %}
+  {% endblock %}
+</div>

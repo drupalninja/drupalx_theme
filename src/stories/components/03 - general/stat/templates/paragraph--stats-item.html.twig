@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% block paragraph %}
+  {% block content %}
+    {% include '@drupalx_theme/03 - general/stat/stat.twig' with {
+        modifier: '',
+        media: content.field_icon ?? content.field_custom_icon,
+        heading: content.field_title|field_value,
+        body: content.field_summary|field_value,
+      } only
+    %}
+  {% endblock %}
+{% endblock paragraph %}
