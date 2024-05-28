@@ -2,7 +2,7 @@
 
 The DrupalX theme starter kit is intended to be used with the [DrupalX distribution](https://github.com/drupalninja/drupalx-project).
 
-This starter kit includes Bootstrap 5, Storybook and full template integration with the DrupalX install profile.
+This starter kit includes [Bootstrap 5](https://getbootstrap.com/), [Storybook](https://storybook.js.org/) and full template integration with the DrupalX install profile.
 
 ## Creating your custom theme
 ```bash
@@ -33,14 +33,17 @@ nvm install
 npm install
 ```
 
-### Run all commands for JS, SASS compilation:
+### Build all required theme assets:
 ```bash
 npm run build
 ```
 
-### Run Storybook
+### Compile SASS as files are updated:
+```bash
+npm run watch
+```
+
+### Run Storybook:
 ```bash
 npm run storybook
 ```
-
-_This will start a local server instance of Storybook._
