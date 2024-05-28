@@ -4,7 +4,10 @@ The DrupalX theme starter kit is intended to be used with the [DrupalX distribut
 
 This starter kit includes [Bootstrap 5](https://getbootstrap.com/), [Storybook](https://storybook.js.org/) and full template integration with the DrupalX install profile.
 
-## Creating your custom theme
+## Generating the theme
+
+The following command will generate the new custom theme using the DrupalX starter as the template:
+
 ```bash
 ddev exec --dir /var/www/html/web core/scripts/drupal generate-theme --starterkit=drupalx_theme nameoftheme
 ```
