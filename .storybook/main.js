@@ -12,7 +12,8 @@ module.exports = {
     'storybook-addon-sass-postcss',
     '@storybook/addon-webpack5-compiler-babel',
     '@chromatic-com/storybook',
-    '@storybook/addon-themes'
+    '@storybook/addon-themes',
+    '@storybook/addon-mdx-gfm'
   ],
   'framework': {
     name: '@storybook/html-webpack5',
