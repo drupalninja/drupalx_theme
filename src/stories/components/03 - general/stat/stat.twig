@@ -1,7 +1,9 @@
 {{ attach_library('drupalx_theme/stat') }}
 
 <div class="stat-item text-center {{ modifier }}">
-  {{ media }}
+  <div class="stat-icon mx-auto">
+    {{ media }}
+  </div>
   {% include '@drupalx_theme/03 - general/heading/heading.twig' with {
     "heading": {
       title: heading,

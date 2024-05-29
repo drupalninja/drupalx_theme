@@ -1,7 +1,13 @@
 // Import site utilities.
 @import '../../../global/bootstrap-init';
 
-.stat-item {
+.stat-icon {
+
+  // Try to match custom SVG size to Material icon size.
+  img {
+    max-height: 73px;
+    margin-bottom: 1rem;
+  }
 
   .material-symbols-outlined {
     font-size: 5rem;
