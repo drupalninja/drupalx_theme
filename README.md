@@ -14,6 +14,13 @@ The following command will generate the new custom theme using the DrupalX start
 ddev exec --dir /var/www/html/web core/scripts/drupal generate-theme --starterkit=drupalx_theme nameoftheme
 ```
 
+Enable the new theme:
+```bash
+ddev . drush theme:en nameoftheme
+ddev . drush config-set system.theme default -y nameoftheme
+ddev . drush cr
+```
+
 ## Compiling Theme Assets
 
 If you haven't yet, install nvm:
