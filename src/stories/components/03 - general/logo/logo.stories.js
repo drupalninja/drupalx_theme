@@ -17,6 +17,6 @@ export default {
 
 export const Logo = LogoTemplate.bind({});
 Logo.args = {
-  modifier: 'col-3 p-3',
+  modifier: 'col-3',
   site_logo: './images/logo.svg'
 };

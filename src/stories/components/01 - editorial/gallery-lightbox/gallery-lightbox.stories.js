@@ -18,6 +18,10 @@ export default {
       type: {
         required: true
       }
+    },
+    modifier: {
+      description: 'The modifier class to apply to the gallery lightbox component',
+      control: 'text'
     }
   }
 };
@@ -26,6 +30,7 @@ export const Gallery = GalleryLightboxTemplate.bind({});
 
 Gallery.args = {
   section_title: 'Optional Title',
+  modifier: 'p-2',
   intro_text:
     '<p>Optional summary text, turpis at luctus finibus, erat lectus convallis velit, at sodales purus lacus quis magna. Curabitur imperdiet sapien libero, fringilla ullamcorper nibh ullamcorper vitae. Proin sed luctus augue.</p>',
   items: [
