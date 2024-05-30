@@ -59,3 +59,17 @@ Run Storybook:
 ```bash
 npm run storybook
 ```
+
+### Managing the 'dist' Folder
+
+By default, the .gitignore file does not ignore the dist folder for demonstration purposes. However, in most projects, you will want to ignore this folder.
+
+To do this, you can uncomment the relevant lines in the .gitignore file to ignore the dist folder and its contents. Here are the steps:
+
+#### Update .gitignore:
+* Open the .gitignore file.
+* Find the lines related to the dist folder, which are commented out.
+* Uncomment these lines to ensure the dist folder is ignored by Git.
+
+#### Deploying Your Application:
+* If you choose to ignore the dist folder, you will need to incorporate an npm build process when you deploy your application. This ensures that the necessary assets are generated and included in your deployment package.
