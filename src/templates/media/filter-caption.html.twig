@@ -12,7 +12,8 @@
  * - string classes: The classes of the captioned HTML tag.
  */
 #}
+{{ attach_library('drupalx_theme/media') }}
 <figure role="group" class="caption my-2 my-lg-4 caption-{{ tag }}{%- if classes %} {{ classes }}{%- endif %}">
-  <div class="rounded shadow">{{ node }}</div>
+  <div class="rounded shadow media">{{ node }}</div>
   <figcaption class="mt-2 mt-lg-4">{{ caption }}</figcaption>
 </figure>
