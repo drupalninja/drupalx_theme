@@ -2,7 +2,7 @@
 
 {% import _self as hero %}
 
-<div class="mb-6 bb-lg-12 text-center">
+<div class="mb-6 mb-lg-12 text-center">
 
   {% if media and layout == 'image_top' %}
     {{ hero.render_media(media, layout) }}
@@ -14,7 +14,7 @@
         heading: {
           title: title,
           heading_level: 1,
-          modifier: 'display-5 fw-semibold mb-4'
+          modifier: 'display-5 fw-semibold mb-2 mb-lg-4'
         }
       },
       with_context = false
@@ -23,7 +23,7 @@
 
   <div class="col-lg-6 mx-auto">
     {% if body_text %}
-      <div class="lead mb-4">
+      <div class="lead mb-2 mb-lg-4">
         {{ body_text }}
       </div>
     {% endif %}
@@ -63,7 +63,7 @@
 
 {% macro render_media(media, layout) %}
   <div class="row">
-    <div class="{{ layout == 'image_top' ? 'mb-8' : 'mt-8' }} d-flex justify-content-center align-items-center">
+    <div class="{{ layout == 'image_top' ? 'mb-2 mb-lg-8' : 'mt-2 mt-lg-8' }} d-flex justify-content-center align-items-center">
       <div class="shadow rounded">{{ media }}</div>
     </div>
   </div>

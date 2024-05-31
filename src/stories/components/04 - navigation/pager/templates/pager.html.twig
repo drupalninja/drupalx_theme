@@ -4,11 +4,13 @@
  * Theme override to display a pager.
  */
 #}
-<div class="mb-12">
-  {%
-    include '@drupalx_theme/04 - navigation/pager/pager.twig' with {
-      items: items,
-      current: current
-    } only
-  %}
-</div>
+{% if items %}
+  <div class="mb-6 mb-lg-12">
+    {%
+      include '@drupalx_theme/04 - navigation/pager/pager.twig' with {
+        items: items,
+        current: current
+      } only
+    %}
+  </div>
+{% endif %}
