@@ -14,7 +14,7 @@
         heading: {
           title: title,
           heading_level: 1,
-          modifier: 'display-5 fw-semibold mb-2 mb-lg-4'
+          modifier: 'display-5 fw-semibold mb-4 mb-lg-4'
         }
       },
       with_context = false
@@ -28,32 +28,34 @@
       </div>
     {% endif %}
 
-    <div class="d-grid gap-2 d-flex justify-content-center">
-      {% if button.url %}
-        {{
-          include('@drupalx_theme/03 - general/button/button.twig', {
-            button: {
-              text: button.text,
-              url: button.url,
-              modifier: 'btn-primary',
-              icon: button.icon
+    {% if button.url %}
+      <div class="d-grid gap-2 d-flex justify-content-center">
+        {% if button.url %}
+          {{
+            include('@drupalx_theme/03 - general/button/button.twig', {
+              button: {
+                text: button.text,
+                url: button.url,
+                modifier: 'btn-primary',
+                icon: button.icon
+              }
             }
-          }
-        )}}
-      {% endif %}
-      {% if button2.url %}
-        {{
-          include('@drupalx_theme/03 - general/button/button.twig', {
-            button: {
-              text: button2.text,
-              url: button2.url,
-              modifier: 'btn-outline-primary',
-              icon: button2.icon
+          )}}
+        {% endif %}
+        {% if button2.url %}
+          {{
+            include('@drupalx_theme/03 - general/button/button.twig', {
+              button: {
+                text: button2.text,
+                url: button2.url,
+                modifier: 'btn-outline-primary',
+                icon: button2.icon
+              }
             }
-          }
-        )}}
-      {% endif %}
-    </div>
+          )}}
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
 
   {% if media and layout == 'image_bottom' %}
@@ -63,7 +65,7 @@
 
 {% macro render_media(media, layout) %}
   <div class="row">
-    <div class="{{ layout == 'image_top' ? 'mb-2 mb-lg-8' : 'mt-2 mt-lg-8' }} d-flex justify-content-center align-items-center">
+    <div class="{{ layout == 'image_top' ? 'mb-4 mb-lg-8' : '' }} d-flex justify-content-center align-items-center">
       <div class="shadow rounded">{{ media }}</div>
     </div>
   </div>
