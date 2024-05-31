@@ -6,6 +6,6 @@ export default {
 
 export const Image = ImageTemplate.bind({});
 Image.args = {
-  src: 'https://via.placeholder.com/640x480.png',
+  src: './images/card.webp',
   alt: 'Image alt text'
 };

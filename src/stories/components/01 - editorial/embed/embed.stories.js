@@ -4,9 +4,9 @@ import EmbedTemplate from './embed.twig';
 export default {
   title: 'Editorial/Embed',
   argTypes: {
-    list: {
-      description: 'Define the array of embed items',
-      control: 'object',
+    embed: {
+      description: 'Define the embedded item',
+      control: 'text',
       type: {
         required: true
       }

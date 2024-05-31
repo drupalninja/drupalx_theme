@@ -147,6 +147,11 @@ main-menu:
   dependencies:
     - "drupalx_theme/bootstrap-js"
 
+media:
+  css:
+    component:
+      dist/css/media.css: {}
+
 menu:
   css:
     component:

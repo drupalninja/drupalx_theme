@@ -1,7 +1,9 @@
 // Import site utilities.
 @import '../../../global/bootstrap-init';
 
-iframe {
-  width: 100%;
-}
+.media {
 
+  img, picture {
+    width: 100%;
+  }
+}
