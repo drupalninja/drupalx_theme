@@ -1,0 +1,4 @@
+.drupal-media img,
+.drupal-media picture {
+  width: 100%;
+}
