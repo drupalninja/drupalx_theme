@@ -2,5 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npm run lint:js && npm run lint:sass
-if ! lsof -i:6006; then npm run storybook; fi
+if ! lsof -i:6006 >/dev/null 2>&1; then npm run storybook; fi
 npx cypress run --headless
