@@ -6,13 +6,13 @@
       "heading": {
         "title": section_title,
         "heading_level": 2,
-        "modifier": "mb-4 mb-lg-6 text-center"
+        "modifier": "card-group-heading mb-4 mb-lg-6 text-center"
       }
     } only
   %}
 {% endif %}
 
-<div class="row">
+<div class="card-group row">
   {% block card_items %}
     {% for item in items %}
       <div class="col-sm-6 col-lg-4 mb-4">
