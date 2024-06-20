@@ -3,4 +3,4 @@
 
 npm run lint:js && npm run lint:sass
 npm run storybook
-npx cypress run --browser chrome
+npx cypress run --headless
