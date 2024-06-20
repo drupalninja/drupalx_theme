@@ -60,6 +60,11 @@ Run Storybook:
 npm run storybook
 ```
 
+Run Cypress tests (requires Storybook running):
+```bash
+npm run cypress
+```
+
 ### Managing the 'dist' Folder
 
 By default, the .gitignore file does not ignore the dist folder for demonstration purposes. However, in most projects, you will want to ignore this folder.

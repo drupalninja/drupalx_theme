@@ -16,7 +16,8 @@
     "watch": "chokidar 'src/**/*.{scss,behavior.js}' -c 'node compile.js {path}'",
     "start": "npm run build && npm run watch",
     "postinstall": "husky install",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cypress": "npx cypress run"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.4.0",
