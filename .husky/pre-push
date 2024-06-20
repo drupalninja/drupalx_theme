@@ -2,3 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npm run lint:js && npm run lint:sass
+npm run storybook
+npx cypress run --browser chrome
