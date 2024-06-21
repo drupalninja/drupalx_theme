@@ -18,7 +18,7 @@
     "postinstall": "husky install",
     "prepare": "husky install",
     "cypress": "npx cypress run",
-    "percy-storybook": "percy storybook ./storybook-build"
+    "percy-storybook": "percy storybook ./storybook-static"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.4.0",
