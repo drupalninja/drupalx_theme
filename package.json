@@ -17,11 +17,13 @@
     "start": "npm run build && npm run watch",
     "postinstall": "husky install",
     "prepare": "husky install",
-    "cypress": "npx cypress run"
+    "cypress": "npx cypress run",
+    "percy-storybook": "percy storybook ./storybook-build"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.4.0",
     "@percy/cli": "^1.28.7",
+    "@percy/storybook": "^6.0.0",
     "@storybook/addon-actions": "^8.1.4",
     "@storybook/addon-essentials": "^8.1.4",
     "@storybook/addon-interactions": "^8.1.4",
