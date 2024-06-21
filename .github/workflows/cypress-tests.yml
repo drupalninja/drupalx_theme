@@ -3,10 +3,10 @@ name: Cypress
 on:
   push:
     branches:
-      - 10.x
+      - 1.x
   pull_request:
     branches:
-      - 10.x
+      - 1.x
 
 jobs:
   cypress-run:
