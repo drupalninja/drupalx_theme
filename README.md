@@ -1,5 +1,9 @@
 # DrupalX Theme Starter Kit
 
+[![Cypress](https://github.com/drupalninja/drupalx_theme/actions/workflows/cypress-tests.yml/badge.svg)](https://github.com/drupalninja/drupalx_theme/actions/workflows/cypress-tests.yml)
+[![Percy](https://github.com/drupalninja/drupalx_theme/actions/workflows/percy.yml/badge.svg)](https://github.com/drupalninja/drupalx_theme/actions/workflows/percy.yml)
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/62f323f4/DrupalX-Theme)
+
 The DrupalX theme starter kit is intended to be used with the [DrupalX distribution](https://github.com/drupalninja/drupalx-project).
 
 This starter kit includes [Bootstrap 5](https://getbootstrap.com/), [Storybook](https://storybook.js.org/) and full template integration with the DrupalX install profile.
