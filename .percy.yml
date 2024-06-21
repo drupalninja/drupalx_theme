@@ -1,0 +1,6 @@
+version: 1
+snapshot:
+  widths: [1024]
+storybook:
+  command: npm run storybook
+  static_build_dir: storybook-static
