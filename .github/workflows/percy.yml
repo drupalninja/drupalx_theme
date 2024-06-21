@@ -22,4 +22,4 @@ jobs:
       - name: Run Percy
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-        run: npx percy exec -- npm run test
+        run: npx percy-storybook --widths=1024
