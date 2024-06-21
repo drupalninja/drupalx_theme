@@ -3,7 +3,7 @@ name: Percy
 on:
   push:
     branches:
-      - main
+      - feature/percy
 
 jobs:
   percy:
