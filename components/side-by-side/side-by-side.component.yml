@@ -54,7 +54,7 @@ properties:
     description: >
       Controls the image left/right placement.
     default: "sb-only left"
-    enum: [ 'sb-only left', 'sb-only right' ]
+    enum: ["sb-only left", "sb-only right"]
 
 default:
   title: "Lorem ipsum dolor sit amet, elit."
@@ -67,7 +67,3 @@ default:
     icon: "arrow_right_alt"
     modifier: "btn-primary has-icon"
   modifier: "sb-only left"
-
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/bootstrap-js

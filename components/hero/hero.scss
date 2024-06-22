@@ -1,8 +1,8 @@
 // Import site utilities.
-@import '../../../global/bootstrap-init';
+@import './src/scss/bootstrap-init';
 
 // Include button styles.
-@import '../../03 - general/button/button';
+@import '../button/button';
 
 // Include heading styles.
-@import '../../03 - general/heading/heading';
+@import '../heading/heading';

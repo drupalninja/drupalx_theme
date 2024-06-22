@@ -26,7 +26,3 @@ default:
       text: "Link 2"
     - url: "#"
       text: "Link 3"
-
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/utility-nav

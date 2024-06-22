@@ -15,7 +15,3 @@ properties:
 default:
   modifier: "col-3"
   site_logo: "./images/logo.svg"
-
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/global-styling

@@ -21,7 +21,3 @@ default:
     - text-info
     - text-light
     - text-dark
-
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/bootstrap-js

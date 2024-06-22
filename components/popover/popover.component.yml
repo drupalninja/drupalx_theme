@@ -1,0 +1,14 @@
+name: popover
+description: >
+  A popover component used to display messages or additional information when triggered.
+
+properties: {}
+
+default: {}
+
+libraryOverrides:
+  js:
+    dist/js/popover.behavior.js: { attributes: { async: true, defer: true } }
+  dependencies:
+    - core/drupal
+    - drupalx_theme/popover-cdn

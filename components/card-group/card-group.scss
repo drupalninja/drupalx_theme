@@ -1,12 +1,11 @@
 // Import site utilities.
-@import '../../../global/bootstrap-init';
+@import './src/scss/bootstrap-init';
 
 // Include card styles.
-@import '../../03 - general/card/card';
+@import '../card/card';
 
 // Include stat styles.
-@import '../../03 - general/stat/stat';
+@import '../stat/stat';
 
 // Include badge styles.
-@import '../../03 - general/badge/badge';
-
+@import '../badge/badge';

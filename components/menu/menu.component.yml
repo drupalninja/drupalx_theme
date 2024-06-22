@@ -36,8 +36,3 @@ default:
       title: "Link 3"
   modifier: ""
   item_modifier: ""
-
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/bootstrap-js
-    - drupalx_theme/bootstrap-css

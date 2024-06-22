@@ -25,13 +25,3 @@ default:
   body: "Vestibulum fringilla pede sit amet augue. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede."
   media: "<span class="material-symbols-outlined display-1">monitoring</span>"
   modifier: "col-4"
-
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/bootstrap-js
-
-styles:
-  - stat.scss
-
-scripts:
-  - stat.stories.js

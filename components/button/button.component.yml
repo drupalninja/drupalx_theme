@@ -24,11 +24,7 @@ properties:
 
 default:
   button:
-    url: '#'
-    text: 'Default Button'
-    icon: ''
-    modifier: ''
-
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/bootstrap-js
+    url: "#"
+    text: "Default Button"
+    icon: ""
+    modifier: ""

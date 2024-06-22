@@ -101,6 +101,3 @@ default:
         link2:
           url: "#"
           text: "Link 2"
-  libraryOverrides:
-    dependencies:
-      - drupalx_theme/bootstrap-js

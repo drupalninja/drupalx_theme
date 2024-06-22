@@ -26,7 +26,3 @@ default:
       url: "#"
     - text: "Link 3"
       url: "#"
-
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/bootstrap-js

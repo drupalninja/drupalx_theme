@@ -15,7 +15,3 @@ properties:
 default:
   src: ""
   alt: ""
-
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/bootstrap-css

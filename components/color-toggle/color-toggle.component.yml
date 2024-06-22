@@ -12,13 +12,9 @@ properties:
 default:
   default_state: "light"
 
-library:
+libraryOverrides:
+  js:
+    color-toggle.behavior.js: { attributes: { async: true, defer: true } }
   dependencies:
     - core/drupal
-    - core/jquery
-    - drupalx_theme/color-toggle.behavior
-    - drupalx_theme/color-toggle.styles
-
-tests:
-  cypress:
-    - color-toggle.spec.js
+    - drupalx_theme/bootstrap-js

@@ -14,7 +14,7 @@ properties:
       logo:
         type: string
         description: >
-          The HTML string for the logo image. 
+          The HTML string for the logo image.
           Example: <img src='logo_src' class='class_names' alt='Logo'>
         default: ""
       quote:
@@ -50,7 +50,3 @@ default:
     name: "Jane Doe"
     job: "Donec interdum metus et hendrerit"
     layout: "left"
-
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/bootstrap-js

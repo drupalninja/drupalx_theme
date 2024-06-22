@@ -1,8 +1,8 @@
 // Import site utilities.
-@import '../../../global/bootstrap-init';
+@import './src/scss/bootstrap-init';
 
 // Include badge styles.
-@import '../../03 - general/badge/badge.scss';
+@import '../badge/badge.scss';
 
 /* Make the image fill the entire teaser. */
 .side-by-side {

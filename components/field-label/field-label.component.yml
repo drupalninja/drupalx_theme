@@ -30,9 +30,3 @@ default:
   id: "floatingInputInvalid"
   placeholder: "name@example.com"
   isInvalid: true
-
-libraryOverrides:
-  dependencies:
-    - core/drupal
-    - core/jquery
-    - core/drupal.form

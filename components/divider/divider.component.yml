@@ -10,7 +10,3 @@ properties:
 
 default:
   class: ""
-
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/bootstrap-css

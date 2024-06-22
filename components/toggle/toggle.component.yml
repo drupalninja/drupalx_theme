@@ -37,7 +37,3 @@ default:
     - id: "flexSwitchCheckCheckedDisabled"
       checked: true
       disabled: true
-
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/bootstrap-js

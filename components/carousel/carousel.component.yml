@@ -42,5 +42,9 @@ default:
       title: "Third slide label"
       caption: "Third slide caption"
 
-libraryDependencies:
-  - bootstrap/carousel
+libraryOverrides:
+  js:
+    carousel.behavior.js: { attributes: { async: false, defer: true } }
+  dependencies:
+    - core/drupal
+    - drupalx_theme/bootstrap-js

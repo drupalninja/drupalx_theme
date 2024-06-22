@@ -27,7 +27,3 @@ default:
       label: "Two"
     - value: "3"
       label: "Three"
-
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/bootstrap-js

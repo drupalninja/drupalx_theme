@@ -16,9 +16,5 @@ default:
   type: "primary"
   message: "A simple primary alert—check it out!"
 
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/bootstrap-css
-
 twig:
   code: |

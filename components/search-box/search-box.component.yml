@@ -14,7 +14,3 @@ properties:
 default:
   placeholder: "Search"
   button_text: "Search"
-
-libraryOverrides:
-  dependencies:
-    - drupalx_theme/bootstrap-js
