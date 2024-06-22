@@ -63,3 +63,7 @@ props:
                   title: URL
                   description: 'The link URL for the sub-menu item.'
                   default: '#'
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js

@@ -4,7 +4,7 @@ import MenuTemplate from './menu.twig';
 export default {
   title: 'Navigation/Menu',
   argTypes: {
-    links: {
+    menu_items: {
       description: 'Define the links',
       control: 'array'
     },
@@ -26,7 +26,7 @@ export default {
 export const Menu = MenuTemplate.bind({});
 
 Menu.args = {
-  items: [
+  menu_items: [
     {
       url: '#',
       title: 'Link 1'
