@@ -1,5 +1,5 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Site Footer
-status: experimental
 description: 'Site Footer component for the DrupalX theme.'
 props:
   type: object
@@ -19,7 +19,7 @@ props:
             type: string
             title: Link URL
             description: The URL the link points to.
-      default: 
+      default:
         - title: 'Privacy Policy'
           url: '#'
         - title: 'Terms of Use'
@@ -46,3 +46,7 @@ props:
       title: Link Item Modifier
       description: CSS class modifier for the link items.
       default: 'fs-5 text-white'
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/menu

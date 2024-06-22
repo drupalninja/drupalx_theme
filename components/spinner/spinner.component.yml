@@ -1,36 +1,3 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Spinner
-status: experimental
 description: 'Spinner component to indicate loading states.'
-props:
-  type: object
-  properties:
-    size:
-      type: string
-      title: Size
-      description: Size of the spinner.
-      enum:
-        - small
-        - medium
-        - large
-      default: medium
-    color:
-      type: string
-      title: Color
-      description: Color of the spinner.
-      enum:
-        - primary
-        - secondary
-        - success
-        - danger
-        - warning
-        - info
-        - light
-        - dark
-      default: primary
-    additional_classes:
-      type: array
-      items:
-        type: string
-      title: Additional Classes
-      description: Additional classes for custom styling.
-      default: []
