@@ -1,0 +1,24 @@
+name: Color Mode Toggle
+description: >
+  A component to toggle between dark and light mode themes using a switch.
+
+properties:
+  default_state:
+    type: string
+    description: >
+      The default state of the dark mode switch (either 'dark' or 'light').
+    default: "light"
+
+default:
+  default_state: "light"
+
+library:
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - drupalx_theme/color-toggle.behavior
+    - drupalx_theme/color-toggle.styles
+
+tests:
+  cypress:
+    - color-toggle.spec.js

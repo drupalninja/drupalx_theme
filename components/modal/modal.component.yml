@@ -1,0 +1,68 @@
+name: Modal
+description: >
+  A modal component used to display content in a dialog box.
+
+properties:
+  id:
+    type: string
+    description: Unique identifier for the modal
+    default: "exampleModal"
+  title:
+    type: string
+    description: Title of the modal
+    default: "Modal title"
+  body:
+    type: string
+    description: Content of the modal body
+    default: ""
+  button1:
+    type: object
+    description: >
+      First button properties, containing the button's text and URL.
+    properties:
+      text:
+        type: string
+        description: Text for the first button
+        default: "Close"
+      url:
+        type: string
+        description: URL the first button will link to. If empty, the button will dismiss the modal.
+        default: ""
+  button2:
+    type: object
+    description: >
+      Second button properties, containing the button's text and URL.
+    properties:
+      text:
+        type: string
+        description: Text for the second button
+        default: "Save Changes"
+      url:
+        type: string
+        description: URL the second button will link to. If empty, the button will dismiss the modal.
+        default: "http://drupal.org/"
+  trigger_button_text:
+    type: string
+    description: Text for the button that triggers the modal
+    default: "Launch demo modal"
+  modifier:
+    type: string
+    description: Modifier class for the trigger button
+    default: "btn-primary"
+
+default:
+  id: "exampleModal"
+  title: "Modal title"
+  body: ""
+  button1:
+    text: "Close"
+    url: ""
+  button2:
+    text: "Save Changes"
+    url: "http://drupal.org/"
+  trigger_button_text: "Launch demo modal"
+  modifier: "btn-primary"
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js

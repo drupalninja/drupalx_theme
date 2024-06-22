@@ -1,0 +1,21 @@
+name: Logo
+description: >
+  The logo component displays the site logo.
+
+properties:
+  modifier:
+    type: string
+    description: Modifier class for the logo container
+    default: ""
+  site_logo:
+    type: string
+    description: URL of the site logo image
+    default: ""
+
+default:
+  modifier: "col-3"
+  site_logo: "./images/logo.svg"
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/global-styling

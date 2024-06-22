@@ -1,0 +1,32 @@
+name: UtilityNav
+description: >
+  A utility navigation component used to display a set of navigation links.
+
+properties:
+  links:
+    type: array
+    description: >
+      A list of navigation links for the utility navigation.
+    items:
+      type: object
+      properties:
+        url:
+          type: string
+          description: URL of the navigation link.
+        text:
+          type: string
+          description: Text of the navigation link.
+    required: true
+
+default:
+  links:
+    - url: "#"
+      text: "Link 1"
+    - url: "#"
+      text: "Link 2"
+    - url: "#"
+      text: "Link 3"
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/utility-nav

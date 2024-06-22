@@ -1,0 +1,43 @@
+name: Menu
+description: >
+  A navigation menu component.
+
+properties:
+  items:
+    type: array
+    description: >
+      Define the list of menu items including URLs and titles.
+    items:
+      type: object
+      properties:
+        url:
+          type: string
+          description: URL for the menu item
+        title:
+          type: string
+          description: Title of the menu item
+    required: true
+  modifier:
+    type: string
+    description: Modifier class for the menu
+    default: ""
+  item_modifier:
+    type: string
+    description: Modifier class for the list item
+    default: ""
+
+default:
+  items:
+    - url: "#"
+      title: "Link 1"
+    - url: "#"
+      title: "Link 2"
+    - url: "#"
+      title: "Link 3"
+  modifier: ""
+  item_modifier: ""
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js
+    - drupalx_theme/bootstrap-css

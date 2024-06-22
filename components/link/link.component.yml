@@ -1,0 +1,53 @@
+name: Link
+description: >
+  A collection of links with various Bootstrap contextual classes.
+
+properties:
+  links:
+    type: array
+    description: >
+      Define the list of links including their text and class.
+    items:
+      type: object
+      properties:
+        href:
+          type: string
+          description: The URL the link goes to
+        class:
+          type: string
+          description: The CSS class for the link
+        text:
+          type: string
+          description: The text of the link
+    required: true
+
+default:
+  links:
+    - href: "#"
+      class: "link-primary"
+      text: "Primary link"
+    - href: "#"
+      class: "link-secondary"
+      text: "Secondary link"
+    - href: "#"
+      class: "link-success"
+      text: "Success link"
+    - href: "#"
+      class: "link-danger"
+      text: "Danger link"
+    - href: "#"
+      class: "link-warning"
+      text: "Warning link"
+    - href: "#"
+      class: "link-info"
+      text: "Info link"
+    - href: "#"
+      class: "link-light"
+      text: "Light link"
+    - href: "#"
+      class: "link-dark"
+      text: "Dark link"
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js

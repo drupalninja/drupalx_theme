@@ -1,0 +1,21 @@
+name: Image
+description: >
+  An image component that displays an image with optional alt text.
+
+properties:
+  src:
+    type: string
+    description: Path to the image file.
+    required: true
+  alt:
+    type: string
+    description: Alternative text for the image.
+    default: ""
+
+default:
+  src: ""
+  alt: ""
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-css

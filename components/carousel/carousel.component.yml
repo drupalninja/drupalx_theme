@@ -1,0 +1,46 @@
+name: Carousel
+description: >
+  A carousel component used to display a set of rotating slides with optional title and caption.
+
+properties:
+  id:
+    type: string
+    description: ID of the carousel instance
+    required: true
+  list:
+    type: array
+    description: >
+      Define the array of carousel items. Each item can optionally contain an image, title, and caption.
+    items:
+      type: object
+      properties:
+        active:
+          type: boolean
+          description: Flag to mark if the carousel item is active
+        image:
+          type: string
+          description: HTML string for the image to be displayed in the carousel item
+        title:
+          type: string
+          description: Title of the carousel item
+        caption:
+          type: string
+          description: Caption text for the carousel item
+    required: true
+
+default:
+  id: "single"
+  list:
+    - active: true
+      image: ""
+      title: "First slide label"
+      caption: "First slide caption"
+    - image: ""
+      title: "Second slide label"
+      caption: "Second slide caption"
+    - image: ""
+      title: "Third slide label"
+      caption: "Third slide caption"
+
+libraryDependencies:
+  - bootstrap/carousel

@@ -1,0 +1,83 @@
+name: Main Menu
+description: >
+  A customizable main navigation menu with dropdowns and off-canvas support.
+
+properties:
+  modifier:
+    type: string
+    description: Modifier class for the navigation menu container.
+    default: ""
+  link_modifier:
+    type: string
+    description: Modifier class for the navigation links.
+    default: "text-dark"
+  site_logo:
+    type: string
+    description: Path to the site logo to be displayed in the menu.
+    default: "./images/logo.svg"
+  items:
+    type: array
+    description: >
+      Define the array of main menu items.
+    items:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the menu item.
+        url:
+          type: string
+          description: URL the menu item links to.
+        in_active_trail:
+          type: boolean
+          description: Indicates if the menu item is in the active trail.
+          default: false
+        is_expanded:
+          type: boolean
+          description: Indicates if the menu item has child items.
+          default: false
+        below:
+          type: array
+          description: Child items of the menu item.
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+                description: Title of the child menu item.
+              url:
+                type: string
+                description: URL the child menu item links to.
+
+default:
+  modifier: ""
+  link_modifier: "text-dark"
+  site_logo: "./images/logo.svg"
+  items:
+    - title: "Home"
+      url: "#"
+      in_active_trail: true
+    - title: "Menu Item 1"
+      url: "#"
+      is_expanded: true
+      below:
+        - title: "Vestibulum ac diam"
+          url: "#"
+        - title: "Mauris blandit aliquet"
+          url: "#"
+        - title: "Pellentesque in"
+          url: "#"
+    - title: "Menu Item 2"
+      url: "#"
+      is_expanded: true
+      below:
+        - title: "Vestibulum ac diam"
+          url: "#"
+        - title: "Mauris blandit aliquet"
+          url: "#"
+    - title: "Menu Item 3"
+      url: "#"
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js

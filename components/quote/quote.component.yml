@@ -1,0 +1,56 @@
+name: Quote
+description: >
+  A component for displaying quotes with a logo and an image.
+
+properties:
+  quote:
+    type: object
+    description: Define the quote object
+    properties:
+      modifier_class:
+        type: string
+        description: Modifier class for the quote container
+        default: ""
+      logo:
+        type: string
+        description: >
+          The HTML string for the logo image. 
+          Example: <img src='logo_src' class='class_names' alt='Logo'>
+        default: ""
+      quote:
+        type: string
+        description: Text content of the quote
+        default: ""
+      image:
+        type: string
+        description: >
+          The HTML string for the headshot image.
+          Example: <img src='image_src' class='class_names' alt='Headshot'>
+        default: ""
+      name:
+        type: string
+        description: Name of the person quoted
+        default: ""
+      job:
+        type: string
+        description: Job title or description of the person quoted
+        default: ""
+      layout:
+        type: string
+        description: Layout orientation of the quote
+        default: "left"
+    required: true
+
+default:
+  quote:
+    modifier_class: ""
+    logo: ""
+    quote: "Quisque id odio. Sed a libero. Praesent ut ligula non mi varius sagittis. Curabitur nisi."
+    image: ""
+    name: "Jane Doe"
+    job: "Donec interdum metus et hendrerit"
+    layout: "left"
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js

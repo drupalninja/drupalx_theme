@@ -1,0 +1,24 @@
+name: Alerts
+description: >
+  A set of different alert styles based on Bootstrap's alert component.
+
+properties:
+  type:
+    type: string
+    description: Type of alert (e.g., primary, secondary, success, danger, warning, info, light, dark)
+    default: "primary"
+  message:
+    type: string
+    description: Display message inside the alert
+    default: "A simple alert—check it out!"
+
+default:
+  type: "primary"
+  message: "A simple primary alert—check it out!"
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-css
+
+twig:
+  code: |

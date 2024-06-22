@@ -1,0 +1,43 @@
+name: Toggle
+description: >
+  A toggle switch component used for data entry, with various states like default, checked, disabled, and checked-disabled.
+
+properties:
+  switches:
+    type: array
+    description: >
+      Define the list of toggle switches, including their id, checked, and disabled states.
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID of the toggle switch
+        checked:
+          type: boolean
+          description: Boolean indicating if the switch is checked
+          default: false
+        disabled:
+          type: boolean
+          description: Boolean indicating if the switch is disabled
+          default: false
+    required: true
+
+default:
+  switches:
+    - id: "flexSwitchCheckDefault"
+      checked: false
+      disabled: false
+    - id: "flexSwitchCheckChecked"
+      checked: true
+      disabled: false
+    - id: "flexSwitchCheckDisabled"
+      checked: false
+      disabled: true
+    - id: "flexSwitchCheckCheckedDisabled"
+      checked: true
+      disabled: true
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js

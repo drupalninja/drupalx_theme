@@ -1,0 +1,76 @@
+name: SiteFooter
+description: >
+  Footer of the website that contains the site logo and navigation links.
+
+properties:
+  site_logo:
+    type: string
+    description: Path to the site logo image
+    default: "./images/logo.svg"
+  modifier:
+    type: string
+    description: Modifier class for the footer
+    default: ""
+  link_item_modifier:
+    type: string
+    description: Modifier class for the link items
+    default: "fs-5 text-white"
+  links:
+    type: array
+    description: >
+      Define the list of footer navigation links.
+    items:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the navigation link
+        url:
+          type: string
+          description: URL of the navigation link
+    required: true
+
+default:
+  site_logo: "./images/logo.svg"
+  modifier: ""
+  link_item_modifier: "fs-5 text-white"
+  links:
+    - title: "Privacy Policy"
+      url: "#"
+    - title: "Terms of Use"
+      url: "#"
+    - title: "Contact Us"
+      url: "#"
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js
+
+cypressTest:
+  description: Cypress tests for the Site Footer component.
+  test:
+    content: |
+      describe('Site Footer component', () => {
+        beforeEach(() => {
+          cy.visit('/storybook/?path=/story/general-site-footer--site-footer');
+        });
+
+        it('renders the site footer with logo and links', () => {
+          cy.get('.footer-logo img').should('have.attr', 'src', './images/logo.svg');
+          cy.get('.footer-logo img').should('have.attr', 'alt').should('not.be.empty');
+          
+          cy.get('.footer-logo').should('have.css', 'max-width', '300px');
+          
+          cy.get('a').contains('Privacy Policy').should('have.attr', 'href', '#');
+          cy.get('a').contains('Terms of Use').should('have.attr', 'href', '#');
+          cy.get('a').contains('Contact Us').should('have.attr', 'href', '#');
+          
+          cy.get('a').should('have.class', 'fs-5').and('have.class', 'text-white');
+        });
+
+        it('applies modifier classes correctly', () => {
+          cy.get('.bg-black').should('exist');
+          cy.get('.px-2').should('exist');
+          cy.get('.py-4').should('exist');
+        });
+      });

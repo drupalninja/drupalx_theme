@@ -1,0 +1,27 @@
+name: Spinner
+description: >
+  A collection of spinners to indicate loading processes.
+
+properties:
+  colors:
+    type: array
+    description: >
+      Define a list of color classes for the spinners.
+    items:
+      type: string
+    required: true
+
+default:
+  colors:
+    - text-primary
+    - text-secondary
+    - text-success
+    - text-danger
+    - text-warning
+    - text-info
+    - text-light
+    - text-dark
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js

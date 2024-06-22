@@ -1,0 +1,20 @@
+name: Search Box
+description: A search box component with input and submit button.
+
+properties:
+  placeholder:
+    type: string
+    description: Placeholder text for the search input field
+    default: "Search"
+  button_text:
+    type: string
+    description: Text for the search button
+    default: "Search"
+
+default:
+  placeholder: "Search"
+  button_text: "Search"
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js

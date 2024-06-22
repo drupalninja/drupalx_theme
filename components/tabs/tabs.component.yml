@@ -1,0 +1,50 @@
+name: Tabs
+description: >
+  A group of navigation tabs used to toggle between content sections.
+
+properties:
+  items:
+    type: array
+    description: >
+      Define the list of tab items.
+    items:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the tab item
+        url:
+          type: string
+          description: URL the tab item links to
+        active:
+          type: boolean
+          description: If the tab item is active
+        disabled:
+          type: boolean
+          description: If the tab item is disabled
+    required: true
+
+default:
+  items:
+    - title: "Active"
+      url: "#"
+      active: true
+      disabled: false
+    - title: "Link"
+      url: "#"
+      active: false
+      disabled: false
+    - title: "Link"
+      url: "#"
+      active: false
+      disabled: false
+    - title: "Disabled"
+      url: "#"
+      active: false
+      disabled: true
+
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - drupalx_theme/bootstrap-js
+    - drupalx_theme/tabs

@@ -1,0 +1,32 @@
+name: Inline Navigation
+description: >
+  A dropdown inline navigation component.
+
+properties:
+  items:
+    type: array
+    description: >
+      Define the list of items containing the text and URL for each navigation link.
+    items:
+      type: object
+      properties:
+        text:
+          type: string
+          description: Text for the navigation link
+        url:
+          type: string
+          description: URL for the navigation link
+    required: true
+
+default:
+  items:
+    - text: "Link 1"
+      url: "#"
+    - text: "Link 2"
+      url: "#"
+    - text: "Link 3"
+      url: "#"
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js

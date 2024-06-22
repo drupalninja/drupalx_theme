@@ -1,0 +1,60 @@
+name: Breadcrumb
+description: >
+  A breadcrumb navigation component used to show the current page's location in a hierarchy.
+
+files:
+  css:
+    component:
+      - 'breadcrumb.scss'
+  js:
+    component:
+      - 'breadcrumb.stories.js'
+  twig:
+    - 'breadcrumb.twig'
+
+properties:
+  breadcrumb:
+    type: array
+    description: >
+      Define the breadcrumb trail. Each item should include a text and an optional URL.
+    items:
+      type: object
+      properties:
+        text:
+          type: string
+          description: The text for the breadcrumb item
+        url:
+          type: string
+          description: The URL for the breadcrumb item, if any
+    required: true
+
+default:
+  breadcrumb:
+    - text: "Home"
+      url: "#"
+    - text: "Parent Page"
+      url: "#"
+    - text: "Current Page"
+      url: ""
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-css
+
+cypress:
+  tests:
+    - description: "Breadcrumb component renders correctly"
+      steps:
+        - visit: "/storybook-static"
+        - click: "Navigation/Breadcrumb"
+        - findByText: "Home"
+        - findByText: "Parent Page"
+        - findByText: "Current Page"
+        - findByRole: "link"
+          name: "Home"
+        - findByRole: "link"
+          name: "Parent Page"
+        - findByRole:
+            name: "Current Page"
+            options:
+              hidden: true

@@ -1,0 +1,38 @@
+name: FieldLabel
+description: >
+  A component for displaying a field label with input validation states.
+
+properties:
+  email:
+    type: string
+    description: The email value to be displayed in the input field.
+    default: "test@example.com"
+  label:
+    type: string
+    description: The label text for the input field.
+    default: "Invalid input"
+  id:
+    type: string
+    description: The unique identifier for the input field.
+    default: "floatingInputInvalid"
+  placeholder:
+    type: string
+    description: The placeholder text for the input field.
+    default: "name@example.com"
+  isInvalid:
+    type: boolean
+    description: Whether the input field is in an invalid state.
+    default: true
+
+default:
+  email: "test@example.com"
+  label: "Invalid input"
+  id: "floatingInputInvalid"
+  placeholder: "name@example.com"
+  isInvalid: true
+
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupal.form

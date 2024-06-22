@@ -1,0 +1,16 @@
+name: Divider
+description: >
+  A horizontal rule component for separating content sections.
+
+properties:
+  class:
+    type: string
+    description: Additional classes for styling the divider
+    default: ""
+
+default:
+  class: ""
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-css

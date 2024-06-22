@@ -1,0 +1,33 @@
+name: Dropdown
+description: >
+  A dropdown select component for data entry.
+
+properties:
+  options:
+    type: array
+    description: Array of option values for the dropdown.
+    items:
+      type: object
+      properties:
+        value:
+          type: string
+          description: Value attribute of the option.
+        label:
+          type: string
+          description: Display text for the option.
+    required: true
+
+default:
+  options:
+    - value: "default"
+      label: "Open this select menu"
+    - value: "1"
+      label: "One"
+    - value: "2"
+      label: "Two"
+    - value: "3"
+      label: "Three"
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js

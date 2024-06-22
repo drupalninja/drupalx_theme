@@ -1,0 +1,52 @@
+name: Form
+description: >
+  A comprehensive form component used in the Editorial Form section, including various input fields and validation.
+
+properties:
+  action:
+    type: string
+    description: The form action URL.
+    default: "javascript:void(0);"
+
+  fields:
+    type: array
+    description: >
+      A list of field objects, each containing type, id, label, and other attributes for the form input fields.
+    items:
+      type: object
+      properties:
+        type:
+          type: string
+          description: The type of the input field (e.g., email, password, text).
+        id:
+          type: string
+          description: The unique identifier of the input field.
+        label:
+          type: string
+          description: The label text associated with the input field.
+        placeholder:
+          type: string
+          description: The placeholder text for the input field (if applicable).
+        options:
+          type: array
+          description: The options for select input fields (if applicable).
+          items:
+            type: string
+    required: true
+
+default:
+  action: "javascript:void(0);"
+  fields:
+    - { type: "email", id: "inputEmail4", label: "Email", placeholder: "" }
+    - { type: "password", id: "inputPassword4", label: "Password", placeholder: "" }
+    - { type: "text", id: "inputAddress", label: "Address", placeholder: "1234 Main St" }
+    - { type: "text", id: "inputAddress2", label: "Address 2", placeholder: "Apartment, studio, or floor" }
+    - { type: "text", id: "inputCity", label: "City", placeholder: "" }
+    - { type: "select", id: "inputState", label: "State", options: ["Choose...", "..."] }
+    - { type: "text", id: "inputZip", label: "Zip", placeholder: "" }
+    - { type: "checkbox", id: "gridCheck", label: "Check me out", placeholder: "" }
+    - { type: "submit", id: "", label: "Sign in", placeholder: "" }
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js

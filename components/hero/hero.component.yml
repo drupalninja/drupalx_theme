@@ -1,0 +1,99 @@
+name: Hero
+description: >
+  A Hero component used to display a prominent section with an image, title, body text, and buttons.
+
+properties:
+  modifier:
+    type: string
+    description: Modifier class for the hero element
+    default: ""
+  media:
+    type: string
+    description: HTML string for the media content (image or video)
+  title:
+    type: string
+    description: Title of the hero section
+  body_text:
+    type: string
+    description: Body text of the hero section
+  layout:
+    type: string
+    description: Layout for the hero section
+    enum:
+      - image_top
+      - image_bottom
+  button:
+    type: object
+    description: Primary button in the hero section
+    properties:
+      url:
+        type: string
+        description: URL for the primary button
+      text:
+        type: string
+        description: Text for the primary button
+      icon:
+        type: string
+        description: Icon for the primary button
+  button2:
+    type: object
+    description: Secondary button in the hero section
+    properties:
+      url:
+        type: string
+        description: URL for the secondary button
+      text:
+        type: string
+        description: Text for the secondary button
+      icon:
+        type: string
+        description: Icon for the secondary button
+
+default:
+  modifier: ""
+  media: ""
+  title: "Phasellus , turpis"
+  body_text: "This copy is optional, if nothing is entered nothing will display. Facit nulla in vulputate vulputate aliquam. Commodo esse habent tation nam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed orci lacus."
+  layout: "image_top"
+  button:
+    url: "#"
+    text: "Link 1"
+    icon: "arrow_right_alt"
+  button2:
+    url: "#"
+    text: "Link 2"
+    icon: "arrow_right_alt"
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js
+    - drupalx_theme/button-styles
+
+tests:
+  - name: "Displays hero title"
+    selector: '[class*="display-5"]'
+    content: "Phasellus"
+  - name: "Displays hero body text"
+    selector: '.lead'
+    content: "This copy is optional"
+  - name: "Displays primary button with correct text"
+    selector: '.btn-primary'
+    content: "Link 1"
+  - name: "Displays secondary button with correct text"
+    selector: '.btn-outline-primary'
+    content: "Link 2"
+  - name: "Displays image at the top when layout is 'image_top'"
+    selector: 'img.img-fluid.rounded'
+    should_exist: true
+  - name: "Responsive behavior on mobile screen"
+    screen_size: "iphone-6"
+    selector: '.mb-6.mb-lg-12.text-center'
+    should_exist: true
+  - name: "Responsive behavior on tablet screen"
+    screen_size: "ipad-2"
+    selector: '.mb-6.mb-lg-12.text-center'
+    should_exist: true
+  - name: "Responsive behavior on desktop screen"
+    screen_size: "macbook-15"
+    selector: '.mb-6.mb-lg-12.text-center'
+    should_exist: true

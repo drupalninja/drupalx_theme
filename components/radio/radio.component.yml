@@ -1,0 +1,40 @@
+name: Radio
+description: >
+  A radio button component for data entry.
+
+properties:
+  name:
+    type: string
+    description: The name attribute for the radio buttons.
+    default: "flexRadioDefault"
+  options:
+    type: array
+    description: >
+      An array of radio button options.
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The id for the radio button input.
+        label:
+          type: string
+          description: The label for the radio button.
+        checked:
+          type: boolean
+          description: Whether the radio button is checked by default.
+    required: true
+
+default:
+  name: "flexRadioDefault"
+  options:
+    - id: "flexRadioDefault1"
+      label: "Default radio"
+      checked: false
+    - id: "flexRadioDefault2"
+      label: "Default checked radio"
+      checked: true
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js

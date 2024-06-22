@@ -1,0 +1,99 @@
+name: Card
+description: >
+  A versatile card component used to display content, featuring images, headings, text, and links.
+
+properties:
+  modifier:
+    type: string
+    description: Modifier class for the card element
+    default: ""
+  body_modifier:
+    type: string
+    description: Modifier class for the card body element
+    default: ""
+  media:
+    type: string
+    description: Media content such as an image or video to be displayed in the card
+    default: ""
+  media_link:
+    type: string
+    description: URL for linking the media content
+    default: ""
+  heading:
+    type: object
+    description: Heading of the card
+    properties:
+      title:
+        type: string
+        description: Title text of the heading
+      heading_level:
+        type: string
+        description: HTML heading level (e.g., '1', '2')
+      url:
+        type: string
+        description: URL the heading links to
+      modifier:
+        type: string
+        description: Modifier class for the heading
+  layout:
+    type: string
+    description: Layout modifier class for the card
+    default: ""
+  tags:
+    type: array
+    description: >
+      List of tags associated with the card.
+    items:
+      type: string
+  summary_text:
+    type: string
+    description: >
+      Summary text content of the card
+  link:
+    type: object
+    description: >
+      First link at the bottom of the card.
+    properties:
+      url:
+        type: string
+        description: URL the link points to
+      text:
+        type: string
+        description: Text of the link
+  link2:
+    type: object
+    description: >
+      Second link at the bottom of the card.
+    properties:
+      url:
+        type: string
+        description: URL the link points to
+      text:
+        type: string
+        description: Text of the link
+
+default:
+  modifier: "col-6"
+  body_modifier: ""
+  media: ""
+  heading:
+    title: "Phasellus auctor, turpis"
+    heading_level: "2"
+    url: "#"
+    modifier: "card-title mb-3"
+  layout: ""
+  tags:
+    - "New feature"
+    - "Announcement"
+  summary_text: >
+    This copy is optional, if nothing is entered nothing will display. Facit nulla in vulputate vulputate aliquam. Commodo esse habent tation nam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed orci lacus.
+  link:
+    url: "#"
+    text: "Link 1"
+  link2:
+    url: "#"
+    text: "Link 2"
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js

@@ -1,0 +1,73 @@
+name: Side-by-Side Component
+description: >
+  A component that displays content and media side by side, with options to customize the content and image placement.
+
+properties:
+  title:
+    type: string
+    description: >
+      The title of the Side-by-Side component.
+    default: "Lorem ipsum dolor sit amet, elit."
+
+  eyebrow:
+    type: string
+    description: >
+      The eyebrow text above the main title.
+    default: "Eyebrow"
+
+  media:
+    type: string
+    description: >
+      The image or video markup for the side-by-side component.
+    default: ""
+
+  body:
+    type: string
+    description: >
+      The body text for the Side-by-Side component.
+    default: "Contra legem facit qui id facit quod lex prohibet. Nec dubitamus multa iter quae et nos invenerat. Praeterea iter est quasdam res quas ex communi. Lorem ipsum dolor sit amet, consectetur adipisici elit."
+
+  button:
+    type: object
+    description: >
+      The call to action button for the Side-by-Side component.
+    properties:
+      url:
+        type: string
+        description: >
+          URL the button links to.
+      text:
+        type: string
+        description: >
+          The text of the button.
+      icon:
+        type: string
+        description: >
+          The icon class for the button.
+      modifier:
+        type: string
+        description: >
+          Modifier classes for the button.
+
+  modifier:
+    type: string
+    description: >
+      Controls the image left/right placement.
+    default: "sb-only left"
+    enum: [ 'sb-only left', 'sb-only right' ]
+
+default:
+  title: "Lorem ipsum dolor sit amet, elit."
+  eyebrow: "Eyebrow"
+  media: ""
+  body: "Contra legem facit qui id facit quod lex prohibet. Nec dubitamus multa iter quae et nos invenerat. Praeterea iter est quasdam res quas ex communi. Lorem ipsum dolor sit amet, consectetur adipisici elit."
+  button:
+    url: "#"
+    text: "Call to action"
+    icon: "arrow_right_alt"
+    modifier: "btn-primary has-icon"
+  modifier: "sb-only left"
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js
