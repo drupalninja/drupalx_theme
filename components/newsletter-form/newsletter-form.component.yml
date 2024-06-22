@@ -1,5 +1,5 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Newsletter Form
-status: experimental
 description: 'A Newsletter form component for subscribing to newsletters'
 props:
   type: object

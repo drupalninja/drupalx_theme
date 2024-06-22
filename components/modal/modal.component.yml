@@ -1,5 +1,5 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Modal
-status: experimental
 description: 'Modal component, see Bootstrap Documentation: https://getbootstrap.com/docs/5.3/components/modal/'
 props:
   type: object
@@ -39,3 +39,8 @@ props:
       title: Modifier
       description: Define the modal modifier class for button.
       default: 'btn-primary'
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js
+    - drupalx_theme/button

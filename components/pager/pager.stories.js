@@ -21,7 +21,7 @@ export default {
 export const Pager = PagerTemplate.bind({});
 Pager.args = {
   heading_id: 'styleguide_instance--1',
-  items: {
+  pager_items: {
     previous: {
       href: '?search=&page=1',
       text: 'Previous'
