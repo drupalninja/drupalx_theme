@@ -25,7 +25,7 @@
 
   <div class="row">
     {% block gallery_items %}
-      {% for item in items %}
+      {% for item in gallery_items %}
         {%
           include '@drupalx_theme/gallery-lightbox/gallery-lightbox-item.twig' with {
             "media": item.media,

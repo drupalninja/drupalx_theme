@@ -174,7 +174,7 @@ export const CardGroupStats = CardGroupTemplate.bind({});
 
 CardGroupStats.args = {
   section_title: 'Top Stats',
-  items: [
+  card_items: [
     {
       media:
         '<span class="material-symbols-outlined display-1">monitoring</span>',
