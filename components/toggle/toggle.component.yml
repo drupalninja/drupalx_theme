@@ -1,39 +1,30 @@
 name: Toggle
-description: >
-  A toggle switch component used for data entry, with various states like default, checked, disabled, and checked-disabled.
-
-properties:
-  switches:
-    type: array
-    description: >
-      Define the list of toggle switches, including their id, checked, and disabled states.
-    items:
-      type: object
-      properties:
-        id:
-          type: string
-          description: ID of the toggle switch
-        checked:
-          type: boolean
-          description: Boolean indicating if the switch is checked
-          default: false
-        disabled:
-          type: boolean
-          description: Boolean indicating if the switch is disabled
-          default: false
-    required: true
-
-default:
-  switches:
-    - id: "flexSwitchCheckDefault"
-      checked: false
-      disabled: false
-    - id: "flexSwitchCheckChecked"
-      checked: true
-      disabled: false
-    - id: "flexSwitchCheckDisabled"
-      checked: false
-      disabled: true
-    - id: "flexSwitchCheckCheckedDisabled"
-      checked: true
-      disabled: true
+status: experimental
+description: 'Toggle component for data entry.'
+props:
+  type: object
+  properties:
+    state:
+      type: boolean
+      title: State
+      description: The state of the toggle, true for on and false for off.
+      default: false
+    disabled:
+      type: boolean
+      title: Disabled
+      description: Whether the toggle is disabled.
+      default: false
+    label:
+      type: string
+      title: Label
+      description: Text label for the toggle.
+      default: 'Toggle'
+    id:
+      type: ['integer', 'string']
+      title: ID
+      description: Unique ID for the toggle component.
+      default: 0
+slots:
+  content:
+    title: Content
+    description: Default content text for the toggle.

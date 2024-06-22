@@ -1,28 +1,23 @@
 name: Inline Navigation
-description: >
-  A dropdown inline navigation component.
-
-properties:
-  items:
-    type: array
-    description: >
-      Define the list of items containing the text and URL for each navigation link.
+status: experimental
+description: 'Inline Navigation component to display a list of navigation links in a horizontal layout.'
+props:
+  type: object
+  properties:
     items:
-      type: object
-      properties:
-        text:
-          type: string
-          description: Text for the navigation link
-        url:
-          type: string
-          description: URL for the navigation link
-    required: true
-
-default:
-  items:
-    - text: "Link 1"
-      url: "#"
-    - text: "Link 2"
-      url: "#"
-    - text: "Link 3"
-      url: "#"
+      type: array
+      title: Items
+      description: An array of navigation items. Each item should include text and url properties.
+      items:
+        type: object
+        properties:
+          text:
+            type: string
+            title: Link Text
+            description: The text for the navigation link.
+            default: ''
+          url:
+            type: string
+            title: URL
+            description: The URL for the navigation link.
+            default: '#'

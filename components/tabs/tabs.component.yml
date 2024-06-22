@@ -1,44 +1,37 @@
 name: Tabs
-description: >
-  A group of navigation tabs used to toggle between content sections.
-
-properties:
-  items:
-    type: array
-    description: >
-      Define the list of tab items.
+status: experimental
+description: 'Tabs component, see Bootstrap Documentation: https://getbootstrap.com/docs/5.3/components/navs-tabs/'
+props:
+  type: object
+  properties:
     items:
-      type: object
-      properties:
-        title:
-          type: string
-          description: Title of the tab item
-        url:
-          type: string
-          description: URL the tab item links to
-        active:
-          type: boolean
-          description: If the tab item is active
-        disabled:
-          type: boolean
-          description: If the tab item is disabled
-    required: true
-
-default:
-  items:
-    - title: "Active"
-      url: "#"
-      active: true
-      disabled: false
-    - title: "Link"
-      url: "#"
-      active: false
-      disabled: false
-    - title: "Link"
-      url: "#"
-      active: false
-      disabled: false
-    - title: "Disabled"
-      url: "#"
-      active: false
-      disabled: true
+      type: array
+      title: Items
+      description: An array of tab items. Each item is an object that has title, url, active, and disabled properties.
+      items:
+        type: object
+        properties:
+          title:
+            type: string
+            title: Title
+            description: Title text for the tab.
+            default: ''
+          url:
+            type: string
+            title: URL
+            description: URL for the tab link.
+            default: '#'
+          active:
+            type: boolean
+            title: Active
+            description: True if this tab is active.
+            default: false
+          disabled:
+            type: boolean
+            title: Disabled
+            description: True if this tab is disabled.
+            default: false
+slots:
+  content:
+    title: Content
+    description: Default content text for the tab.

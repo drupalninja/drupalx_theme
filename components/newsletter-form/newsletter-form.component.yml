@@ -1,12 +1,15 @@
 name: Newsletter Form
-description: >
-  A component for users to sign up for newsletters.
-
-properties:
-  modifier:
-    type: string
-    description: Modifier class for the newsletter form component
-    default: "border p-4 rounded"
-
-default:
-  modifier: "border p-4 rounded"
+status: experimental
+description: 'A Newsletter form component for subscribing to newsletters'
+props:
+  type: object
+  properties:
+    modifier:
+      type: string
+      title: Modifier
+      description: 'The modifier class to apply to the newsletter form component.'
+      default: 'border p-4 rounded'
+slots:
+  content:
+    title: Content
+    description: 'The HTML content included within the Newsletter Form.'

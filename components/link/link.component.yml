@@ -1,49 +1,34 @@
 name: Link
-description: >
-  A collection of links with various Bootstrap contextual classes.
-
-properties:
-  links:
-    type: array
-    description: >
-      Define the list of links including their text and class.
-    items:
-      type: object
-      properties:
-        href:
-          type: string
-          description: The URL the link goes to
-        class:
-          type: string
-          description: The CSS class for the link
-        text:
-          type: string
-          description: The text of the link
-    required: true
-
-default:
-  links:
-    - href: "#"
-      class: "link-primary"
-      text: "Primary link"
-    - href: "#"
-      class: "link-secondary"
-      text: "Secondary link"
-    - href: "#"
-      class: "link-success"
-      text: "Success link"
-    - href: "#"
-      class: "link-danger"
-      text: "Danger link"
-    - href: "#"
-      class: "link-warning"
-      text: "Warning link"
-    - href: "#"
-      class: "link-info"
-      text: "Info link"
-    - href: "#"
-      class: "link-light"
-      text: "Light link"
-    - href: "#"
-      class: "link-dark"
-      text: "Dark link"
+status: experimental
+description: 'Link component'
+props:
+  type: object
+  properties:
+    url:
+      type: string
+      title: URL
+      description: The href URL for the link.
+      default: '#'
+    text:
+      type: string
+      title: Text
+      description: The text content of the link.
+      default: 'Click here'
+    target:
+      type: string
+      title: Target
+      description: HTML target attribute specifying where to open the linked document.
+      enum:
+        - _self
+        - _blank
+        - _parent
+        - _top
+      default: _self
+    link_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: A list of HTML attributes for the link.
+slots:
+  content:
+    title: Content
+    description: Default content text for the link.

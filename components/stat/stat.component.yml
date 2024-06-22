@@ -1,27 +1,26 @@
 name: Stat
-description: >
-  A stat component used to display statistical information along with an icon and text.
-
-properties:
-  heading:
-    type: string
-    description: Stat heading
-    default: "This is small heading"
-  body:
-    type: string
-    description: Stat text
-    default: "Vestibulum fringilla pede sit amet augue. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede."
-  media:
-    type: string
-    description: Stat media
-    default: '<span class="material-symbols-outlined display-1">monitoring</span>'
-  modifier:
-    type: string
-    description: Modifier classes for the stat component
-    default: "col-4"
-
-default:
-  heading: "This is small heading"
-  body: "Vestibulum fringilla pede sit amet augue. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede."
-  media: '<span class="material-symbols-outlined display-1">monitoring</span>'
-  modifier: "col-4"
+status: experimental
+description: 'Stat component with customizable heading, body, media, and modifier.'
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+      description: Stat heading.
+      default: ''
+    body:
+      type: string
+      title: Body
+      description: Stat text.
+      default: ''
+    media:
+      type: string
+      title: Media
+      description: Stat media.
+      default: ''
+    modifier:
+      type: string
+      title: Modifier
+      description: Stat modifier.
+      default: ''

@@ -1,28 +1,38 @@
 name: Search Results
-description: >
-  A component to display search results with titles, summaries, and links.
-
-properties:
-  items:
-    type: array
-    description: >
-      List of search result items including title, summary, and link.
+status: experimental
+description: 'Component to display search results in a list format.'
+props:
+  type: object
+  properties:
     items:
-      type: object
-      properties:
-        title:
-          type: string
-          description: Title of the search result item.
-        summary:
-          type: string
-          description: Summary of the search result item.
-        link:
-          type: string
-          description: URL link of the search result item.
-    required: true
-
-default:
-  items:
-    - title: "Sample Search Result Title"
-      summary: ""
-      link: "https://www.example.com"
+      type: array
+      title: Items
+      description: An array of search results. Each item is an object containing title, image, summary, and link properties.
+      default: []
+      items:
+        type: object
+        properties:
+          title:
+            type: string
+            title: Title
+            description: The title of the search result item.
+            default: ''
+          image:
+            type: string
+            title: Image
+            description: The image HTML markup for the search result item.
+            default: ''
+          summary:
+            type: string
+            title: Summary
+            description: The summary HTML content for the search result item.
+            default: ''
+          link:
+            type: string
+            title: Link
+            description: The URL link for the search result item.
+            default: ''
+slots:
+  content:
+    title: Content
+    description: Default content for the search results list.

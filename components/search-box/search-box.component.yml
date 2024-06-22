@@ -1,16 +1,40 @@
 name: Search Box
-description: A search box component with input and submit button.
-
-properties:
-  placeholder:
-    type: string
-    description: Placeholder text for the search input field
-    default: "Search"
-  button_text:
-    type: string
-    description: Text for the search button
-    default: "Search"
-
-default:
-  placeholder: "Search"
-  button_text: "Search"
+status: experimental
+description: 'Search Box component for data entry, allowing users to input and search text.'
+props:
+  type: object
+  properties:
+    placeholder:
+      type: string
+      title: Placeholder
+      description: Placeholder text for the search box input field.
+      default: 'Search...'
+    id:
+      type: ['integer', 'string']
+      title: ID
+      description: Unique ID for the search box component.
+      default: ''
+    size:
+      type: string
+      title: Size
+      description: Size of the search box input field.
+      enum:
+        - small
+        - medium
+        - large
+      default: medium
+    input_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Input Attributes
+      description: A list of HTML attributes for the input element.
+actions:
+  type: object
+  properties:
+    onSubmit:
+      type: string
+      title: On Submit
+      description: JavaScript function to call when the search form is submitted.
+slots:
+  input:
+    title: Input
+    description: Input field for the search box where users can enter search terms.

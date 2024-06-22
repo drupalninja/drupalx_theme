@@ -1,20 +1,30 @@
 name: Color Mode Toggle
-description: >
-  A component to toggle between dark and light mode themes using a switch.
-
-properties:
-  default_state:
-    type: string
-    description: >
-      The default state of the dark mode switch (either 'dark' or 'light').
-    default: "light"
-
-default:
-  default_state: "light"
-
-libraryOverrides:
-  js:
-    color-toggle.behavior.js: { attributes: { async: true, defer: true } }
-  dependencies:
-    - core/drupal
-    - drupalx_theme/bootstrap-js
+status: experimental
+description: 'Color Mode Toggle component to switch between dark and light modes.'
+props:
+  type: object
+  properties:
+    id:
+      type: string
+      title: ID
+      description: ID for the toggle input element.
+      default: 'darkModeSwitch'
+    label:
+      type: string
+      title: Label
+      description: Label for the toggle input element.
+      default: 'Dark Mode Toggle'
+    switch_icon:
+      type: string
+      title: Switch Icon
+      description: Icon for the mode switch.
+      default: 'light_mode'
+    switch_icon_element:
+      type: string
+      title: Switch Icon Element
+      description: The CSS selector for the switch icon element.
+      default: '.darkmode-switch .material-symbols-outlined'
+slots:
+  content:
+    title: Content
+    description: Default content for the Color Mode Toggle component.

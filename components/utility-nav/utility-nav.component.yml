@@ -1,28 +1,37 @@
-name: UtilityNav
-description: >
-  A utility navigation component used to display a set of navigation links.
-
-properties:
-  links:
-    type: array
-    description: >
-      A list of navigation links for the utility navigation.
-    items:
-      type: object
-      properties:
-        url:
-          type: string
-          description: URL of the navigation link.
-        text:
-          type: string
-          description: Text of the navigation link.
-    required: true
-
-default:
-  links:
-    - url: "#"
-      text: "Link 1"
-    - url: "#"
-      text: "Link 2"
-    - url: "#"
-      text: "Link 3"
+name: Utility Nav
+status: experimental
+description: 'Utility navigation component with links.'
+props:
+  type: object
+  properties:
+    links:
+      type: array
+      title: Links
+      description: An array of links for the utility navigation.
+      items:
+        type: object
+        properties:
+          url:
+            type: string
+            title: URL
+            description: The URL the link points to.
+            default: '#'
+          text:
+            type: string
+            title: Text
+            description: The text for the link.
+            default: 'Link text'
+      default: 
+        - 
+          url: '#'
+          text: 'Link 1'
+        - 
+          url: '#'
+          text: 'Link 2'
+        - 
+          url: '#'
+          text: 'Link 3'
+slots:
+  content:
+    title: Content
+    description: Content inside the utility nav.

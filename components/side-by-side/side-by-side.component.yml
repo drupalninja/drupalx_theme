@@ -1,69 +1,59 @@
-name: Side-by-Side Component
-description: >
-  A component that displays content and media side by side, with options to customize the content and image placement.
-
-properties:
-  title:
-    type: string
-    description: >
-      The title of the Side-by-Side component.
-    default: "Lorem ipsum dolor sit amet, elit."
-
-  eyebrow:
-    type: string
-    description: >
-      The eyebrow text above the main title.
-    default: "Eyebrow"
-
-  media:
-    type: string
-    description: >
-      The image or video markup for the side-by-side component.
-    default: ""
-
-  body:
-    type: string
-    description: >
-      The body text for the Side-by-Side component.
-    default: "Contra legem facit qui id facit quod lex prohibet. Nec dubitamus multa iter quae et nos invenerat. Praeterea iter est quasdam res quas ex communi. Lorem ipsum dolor sit amet, consectetur adipisici elit."
-
-  button:
-    type: object
-    description: >
-      The call to action button for the Side-by-Side component.
-    properties:
-      url:
-        type: string
-        description: >
-          URL the button links to.
-      text:
-        type: string
-        description: >
-          The text of the button.
-      icon:
-        type: string
-        description: >
-          The icon class for the button.
-      modifier:
-        type: string
-        description: >
-          Modifier classes for the button.
-
-  modifier:
-    type: string
-    description: >
-      Controls the image left/right placement.
-    default: "sb-only left"
-    enum: ["sb-only left", "sb-only right"]
-
-default:
-  title: "Lorem ipsum dolor sit amet, elit."
-  eyebrow: "Eyebrow"
-  media: ""
-  body: "Contra legem facit qui id facit quod lex prohibet. Nec dubitamus multa iter quae et nos invenerat. Praeterea iter est quasdam res quas ex communi. Lorem ipsum dolor sit amet, consectetur adipisici elit."
-  button:
-    url: "#"
-    text: "Call to action"
-    icon: "arrow_right_alt"
-    modifier: "btn-primary has-icon"
-  modifier: "sb-only left"
+name: Side-By-Side
+status: experimental
+description: 'Side-by-Side component for displaying media and text content side by side.'
+props:
+  type: object
+  properties:
+    eyebrow:
+      type: string
+      title: Eyebrow Text
+      description: Eyebrow displays above the main title.
+      default: ''
+    title:
+      type: string
+      title: Title
+      description: Side-by-Side title
+      default: ''
+    media:
+      type: string
+      title: Media
+      description: Side-by-Side image or video markup
+      default: ''
+    body:
+      type: string
+      title: Body Text
+      description: Side-by-Side body text
+      default: ''
+    button:
+      type: object
+      title: Button
+      description: Call to action.
+      properties:
+        url:
+          type: string
+          title: URL
+          description: The URL for the button link.
+          default: '#'
+        text:
+          type: string
+          title: Button Text
+          description: The text inside the button.
+          default: 'Call to action'
+        icon:
+          type: string
+          title: Icon
+          description: Icon for the button.
+          default: 'arrow_right_alt'
+        modifier:
+          type: string
+          title: Modifier
+          description: Additional classes for styling the button.
+          default: 'btn-primary has-icon'
+    modifier:
+      type: string
+      title: Modifier
+      description: Controls image left/right placement.
+      enum:
+        - 'sb-only left'
+        - 'sb-only right'
+      default: 'sb-only left'

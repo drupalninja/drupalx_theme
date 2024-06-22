@@ -1,29 +1,47 @@
 name: Dropdown
-description: >
-  A dropdown select component for data entry.
-
-properties:
-  options:
-    type: array
-    description: Array of option values for the dropdown.
-    items:
-      type: object
-      properties:
-        value:
-          type: string
-          description: Value attribute of the option.
-        label:
-          type: string
-          description: Display text for the option.
-    required: true
-
-default:
-  options:
-    - value: "default"
-      label: "Open this select menu"
-    - value: "1"
-      label: "One"
-    - value: "2"
-      label: "Two"
-    - value: "3"
-      label: "Three"
+status: experimental
+description: 'Dropdown component for data entry, suitable for use in various form contexts.'
+props:
+  type: object
+  properties:
+    options:
+      type: array
+      title: Options
+      description: An array of options for the dropdown. Each option should be an object with value and label properties.
+      default: []
+    default_value:
+      type: string
+      title: Default Value
+      description: The default selected value for the dropdown.
+      default: ''
+    label:
+      type: string
+      title: Label
+      description: The label for the dropdown.
+      default: ''
+    placeholder:
+      type: string
+      title: Placeholder
+      description: Placeholder text for the dropdown when no option is selected.
+      default: ''
+    disabled:
+      type: boolean
+      title: Disabled
+      description: Whether the dropdown is disabled.
+      default: false
+    required:
+      type: boolean
+      title: Required
+      description: Whether the dropdown is a required field.
+      default: false
+    utility_classes:
+      type: array
+      items:
+        type: string
+      title: Utility Classes
+      default: []
+      description: An array of utility classes to add custom styles to the component.
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: HTML attributes for the dropdown.

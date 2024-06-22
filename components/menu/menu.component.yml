@@ -1,38 +1,41 @@
 name: Menu
-description: >
-  A navigation menu component.
-
-properties:
-  items:
-    type: array
-    description: >
-      Define the list of menu items including URLs and titles.
-    items:
+status: experimental
+description: 'Menu component for navigation, supporting customizable links and attributes.'
+props:
+  type: object
+  properties:
+    links:
+      type: array
+      title: Links
+      description: Define the links for the menu.
+      items:
+        type: object
+        properties:
+          url:
+            type: string
+            title: URL
+            description: URL of the menu item.
+            default: '#'
+          title:
+            type: string
+            title: Title
+            description: Title of the menu item.
+            default: ''
+    attributes:
       type: object
-      properties:
-        url:
-          type: string
-          description: URL for the menu item
-        title:
-          type: string
-          description: Title of the menu item
-    required: true
-  modifier:
-    type: string
-    description: Modifier class for the menu
-    default: ""
-  item_modifier:
-    type: string
-    description: Modifier class for the list item
-    default: ""
-
-default:
+      title: Attributes
+      description: Define the HTML attributes for the menu.
+    modifier:
+      type: string
+      title: Modifier
+      description: Define the modifier for the menu.
+      default: ''
+    item_modifier:
+      type: string
+      title: Item Modifier
+      description: Define the list item modifier for the menu.
+      default: ''
+slots:
   items:
-    - url: "#"
-      title: "Link 1"
-    - url: "#"
-      title: "Link 2"
-    - url: "#"
-      title: "Link 3"
-  modifier: ""
-  item_modifier: ""
+    title: Menu Items
+    description: Default menu items.

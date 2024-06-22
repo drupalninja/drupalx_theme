@@ -1,36 +1,39 @@
 name: Radio
-description: >
-  A radio button component for data entry.
-
-properties:
-  name:
-    type: string
-    description: The name attribute for the radio buttons.
-    default: "flexRadioDefault"
-  options:
-    type: array
-    description: >
-      An array of radio button options.
-    items:
-      type: object
-      properties:
-        id:
-          type: string
-          description: The id for the radio button input.
-        label:
-          type: string
-          description: The label for the radio button.
-        checked:
-          type: boolean
-          description: Whether the radio button is checked by default.
-    required: true
-
-default:
-  name: "flexRadioDefault"
-  options:
-    - id: "flexRadioDefault1"
-      label: "Default radio"
-      checked: false
-    - id: "flexRadioDefault2"
-      label: "Default checked radio"
-      checked: true
+status: experimental
+description: 'Radio component for selecting options, typically used within forms.'
+props:
+  type: object
+  properties:
+    label:
+      type: string
+      title: Label
+      description: Text label for the radio button.
+      default: ''
+    name:
+      type: string
+      title: Name
+      description: Name attribute for the radio button group.
+      default: 'radio-group'
+    value:
+      type: string
+      title: Value
+      description: Value attribute for the radio button.
+      default: ''
+    checked:
+      type: boolean
+      title: Checked
+      description: Indicates if the radio button is selected by default.
+      default: false
+    disabled:
+      type: boolean
+      title: Disabled
+      description: Indicates if the radio button is disabled.
+      default: false
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: A list of HTML attributes for the radio button.
+slots:
+  content:
+    title: Content
+    description: Default content text for the radio button.

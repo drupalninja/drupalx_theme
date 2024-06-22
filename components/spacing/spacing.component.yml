@@ -1,0 +1,38 @@
+name: Spacing
+status: experimental
+description: 'Spacing component, demonstrating various spacing utilities and classes.'
+props:
+  type: object
+  properties:
+    spacing_size:
+      type: string
+      title: Spacing Size
+      description: Defines the size of the spacing, e.g., small, medium, large.
+      enum:
+        - small
+        - medium
+        - large
+      default: medium
+    spacing_type:
+      type: string
+      title: Spacing Type
+      description: Type of spacing to apply, e.g., margin or padding.
+      enum:
+        - margin
+        - padding
+      default: margin
+    direction:
+      type: string
+      title: Direction
+      description: Direction of the spacing, e.g., top, bottom, left, right.
+      enum:
+        - top
+        - bottom
+        - left
+        - right
+        - all
+      default: all
+slots:
+  content:
+    title: Content
+    description: Content inside the spacing container.

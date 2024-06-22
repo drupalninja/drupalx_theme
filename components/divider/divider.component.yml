@@ -1,12 +1,21 @@
 name: Divider
-description: >
-  A horizontal rule component for separating content sections.
-
-properties:
-  class:
-    type: string
-    description: Additional classes for styling the divider
-    default: ""
-
-default:
-  class: ""
+status: experimental
+description: 'Divider component; used to visually separate content sections.'
+props:
+  type: object
+  properties:
+    divider_utility_classes:
+      type: array
+      items:
+        type: string
+      title: Divider Utility Classes
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes to this component.
+      default: []
+    divider_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: A list of HTML attributes for the divider.
+slots:
+  content:
+    title: Content
+    description: Content around the divider.

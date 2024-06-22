@@ -1,36 +1,46 @@
-name: text-block
-description: >
-  A text block component used to display a block of text with a heading and body text.
-
-properties:
-  body_text:
-    type: string
-    description: The body text of the text block.
-    default: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mauris mi, aliquam in orci at, finibus malesuada elit. Vivamus ex ante, imperdiet nec odio ac, sollicitudin fermentum velit. Nunc vestibulum massa est, eu auctor libero pellentesque eu. Cras id augue a lacus imperdiet convallis dictum vel diam. Fusce ut ex ac sem condimentum ornare. Nam at rutrum enim. Quisque convallis augue in nisi interdum, ac suscipit elit sollicitudin.</p><p>Nulla velit purus, varius quis velit aliquet, lobortis venenatis mauris. In non ligula eget ex semper pulvinar. Aliquam aliquet hendrerit auctor. Duis bibendum placerat risus, non commodo magna ornare id. Morbi eget nulla hendrerit, molestie nisl eget, semper odio. Mauris mollis risus sit amet ligula mattis vehicula. Donec maximus condimentum lacus, quis porttitor risus fermentum id. Duis semper neque in interdum pulvinar. Nam venenatis interdum libero. Proin dictum blandit ante sollicitudin laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas in pharetra ligula.</p>'
-  heading:
-    type: object
-    properties:
-      title:
-        type: string
-        description: The title of the heading.
-        default: 'Title Lorem Ipsum Dolor'
-      level:
-        type: string
-        description: The level of the heading (e.g., 1, 2, 3, 4, 5, 6).
-        default: '2'
-      modifier:
-        type: string
-        description: CSS class modifier for the heading.
-        default: 'mb-2 display-3'
-  modifier:
-    type: string
-    description: CSS class modifier for the text block.
-    default: 'col-10 p-4'
-
-default:
-  body_text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mauris mi, aliquam in orci at, finibus malesuada elit. Vivamus ex ante, imperdiet nec odio ac, sollicitudin fermentum velit. Nunc vestibulum massa est, eu auctor libero pellentesque eu. Cras id augue a lacus imperdiet convallis dictum vel diam. Fusce ut ex ac sem condimentum ornare. Nam at rutrum enim. Quisque convallis augue in nisi interdum, ac suscipit elit sollicitudin.</p><p>Nulla velit purus, varius quis velit aliquet, lobortis venenatis mauris. In non ligula eget ex semper pulvinar. Aliquam aliquet hendrerit auctor. Duis bibendum placerat risus, non commodo magna ornare id. Morbi eget nulla hendrerit, molestie nisl eget, semper odio. Mauris mollis risus sit amet ligula mattis vehicula. Donec maximus condimentum lacus, quis porttitor risus fermentum id. Duis semper neque in interdum pulvinar. Nam venenatis interdum libero. Proin dictum blandit ante sollicitudin laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas in pharetra ligula.</p>'
-  heading:
-    title: 'Title Lorem Ipsum Dolor'
-    level: '2'
-    modifier: 'mb-2 display-3'
-  modifier: 'col-10 p-4'
+name: Text Block
+status: experimental
+description: 'Text Block component used in editorial theming.'
+props:
+  type: object
+  properties:
+    body_text:
+      type: string
+      title: Body Text
+      description: Define the Text Block copy.
+      default: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p>Nulla velit purus, varius quis velit aliquet, lobortis venenatis mauris.</p>'
+    heading:
+      type: object
+      title: Heading
+      properties:
+        title:
+          type: string
+          title: Title
+          description: Define the Text Block heading title.
+          default: 'Title Lorem Ipsum Dolor'
+        level:
+          type: string
+          title: Level
+          description: Define the HTML tag level for the heading.
+          enum:
+            - '1'
+            - '2'
+            - '3'
+            - '4'
+            - '5'
+            - '6'
+          default: '2'
+        modifier:
+          type: string
+          title: Modifier
+          description: Define the Text Block heading modifier class.
+          default: 'mb-2 display-3'
+    modifier:
+      type: string
+      title: Modifier
+      description: Define the Text Block modifier class.
+      default: 'col-10 p-4'
+slots:
+  content:
+    title: Content
+    description: Default content for the Text Block component.

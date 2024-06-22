@@ -1,32 +1,29 @@
-name: FieldLabel
-description: >
-  A component for displaying a field label with input validation states.
-
-properties:
-  email:
-    type: string
-    description: The email value to be displayed in the input field.
-    default: "test@example.com"
-  label:
-    type: string
-    description: The label text for the input field.
-    default: "Invalid input"
-  id:
-    type: string
-    description: The unique identifier for the input field.
-    default: "floatingInputInvalid"
-  placeholder:
-    type: string
-    description: The placeholder text for the input field.
-    default: "name@example.com"
-  isInvalid:
-    type: boolean
-    description: Whether the input field is in an invalid state.
-    default: true
-
-default:
-  email: "test@example.com"
-  label: "Invalid input"
-  id: "floatingInputInvalid"
-  placeholder: "name@example.com"
-  isInvalid: true
+name: Field Label
+status: experimental
+description: 'Field Label component for data entry purposes'
+props:
+  type: object
+  properties:
+    label:
+      type: string
+      title: Label
+      description: Text for the field label.
+      default: ''
+    required:
+      type: boolean
+      title: Required
+      description: Indicates if the field is required.
+      default: false
+    field_id:
+      type: ['integer', 'string']
+      title: Field ID
+      description: The unique identifier for the field.
+      default: ''
+    label_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Label Attributes
+      description: A list of HTML attributes for the label element.
+slots:
+  content:
+    title: Content
+    description: Default content for the field label.

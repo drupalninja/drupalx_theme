@@ -1,13 +1,20 @@
 name: Shadow
-description: >
-  A component to display various shadow effects on div elements.
-
-properties:
-  shadow_type:
-    type: string
-    description: >
-      Class to define the shadow intensity. Options include "shadow-none", "shadow-sm", "shadow", "shadow-lg".
-    default: "shadow-sm"
-
-default:
-  shadow_type: "shadow-sm"
+status: experimental
+description: 'Shadow component for general use cases.'
+props:
+  type: object
+  properties:
+    shadow_level:
+      type: string
+      title: Shadow Level
+      description: Sets the level of shadow effect.
+      enum:
+        - none
+        - small
+        - medium
+        - large
+      default: none
+slots:
+  content:
+    title: Content
+    description: Content that will be displayed with the shadow effect.

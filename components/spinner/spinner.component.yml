@@ -1,23 +1,40 @@
 name: Spinner
-description: >
-  A collection of spinners to indicate loading processes.
-
-properties:
-  colors:
-    type: array
-    description: >
-      Define a list of color classes for the spinners.
-    items:
+status: experimental
+description: 'Spinner component to indicate loading states.'
+props:
+  type: object
+  properties:
+    size:
       type: string
-    required: true
-
-default:
-  colors:
-    - text-primary
-    - text-secondary
-    - text-success
-    - text-danger
-    - text-warning
-    - text-info
-    - text-light
-    - text-dark
+      title: Size
+      description: Size of the spinner.
+      enum:
+        - small
+        - medium
+        - large
+      default: medium
+    color:
+      type: string
+      title: Color
+      description: Color of the spinner.
+      enum:
+        - primary
+        - secondary
+        - success
+        - danger
+        - warning
+        - info
+        - light
+        - dark
+      default: primary
+    additional_classes:
+      type: array
+      items:
+        type: string
+      title: Additional Classes
+      description: Additional classes for custom styling.
+      default: []
+slots:
+  default:
+    title: Default
+    description: Default slot for additional content inside the spinner if necessary.

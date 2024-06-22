@@ -1,20 +1,39 @@
 name: Alerts
-description: >
-  A set of different alert styles based on Bootstrap's alert component.
-
-properties:
-  type:
-    type: string
-    description: Type of alert (e.g., primary, secondary, success, danger, warning, info, light, dark)
-    default: "primary"
-  message:
-    type: string
-    description: Display message inside the alert
-    default: "A simple alert—check it out!"
-
-default:
-  type: "primary"
-  message: "A simple primary alert—check it out!"
-
-twig:
-  code: |
+status: experimental
+description: 'Alerts component for displaying important messages and notifications.'
+props:
+  type: object
+  properties:
+    alert_type:
+      type: string
+      title: Alert Type
+      description: Type of alert to display (e.g., success, warning, danger, info).
+      enum:
+        - success
+        - warning
+        - danger
+        - info
+      default: info
+    message:
+      type: string
+      title: Message
+      description: The text message to be displayed inside the alert.
+      default: ''
+    dismissible:
+      type: boolean
+      title: Dismissible
+      description: Whether the alert can be dismissed by the user.
+      default: false
+    icon:
+      type: boolean
+      title: Icon
+      description: Whether to display an icon inside the alert.
+      default: true
+    alert_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: A list of HTML attributes for the alert container.
+slots:
+  alert_content:
+    title: Alert Content
+    description: Custom HTML content to be displayed inside the alert.

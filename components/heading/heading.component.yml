@@ -1,26 +1,36 @@
-name: heading
-description: >
-  A heading component used to display titles with different levels and modifiers.
-
-properties:
-  heading:
-    type: object
-    properties:
-      title:
-        type: string
-        description: The text of the heading.
-        default: "Title Lorem Ipsum Dolor"
-      level:
-        type: string
-        description: The level of the heading (e.g., 1, 2, 3, 4, 5, 6).
-        default: "2"
-      modifier:
-        type: string
-        description: CSS class modifier for the heading.
-        default: "display-3"
-
-default:
-  heading:
-    title: "Title Lorem Ipsum Dolor"
-    level: "2"
-    modifier: "display-3"
+name: Heading
+status: experimental
+description: 'Heading component, provides various heading levels and modifiers.'
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: The text to display as the heading.
+      default: 'Title Lorem Ipsum Dolor'
+    level:
+      type: string
+      title: Heading Level
+      description: The HTML tag level for the heading.
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+      default: 'h2'
+    modifier:
+      type: string
+      title: Modifier Class
+      description: Additional modifier class for styling the heading.
+      default: 'display-3'
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: A list of HTML attributes for the heading.
+slots:
+  content:
+    title: Content
+    description: Default content text for the heading.

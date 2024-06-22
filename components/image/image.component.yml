@@ -1,17 +1,20 @@
 name: Image
-description: >
-  An image component that displays an image with optional alt text.
-
-properties:
-  src:
-    type: string
-    description: Path to the image file.
-    required: true
-  alt:
-    type: string
-    description: Alternative text for the image.
-    default: ""
-
-default:
-  src: ""
-  alt: ""
+status: experimental
+description: 'Image component used to display an image with alt text.'
+props:
+  type: object
+  properties:
+    src:
+      type: string
+      title: Source
+      description: Path to the image file.
+      default: ''
+    alt:
+      type: string
+      title: Alt Text
+      description: Alternative text for the image.
+      default: ''
+slots:
+  content:
+    title: Content
+    description: Default content text for the image component.

@@ -1,17 +1,24 @@
 name: Logo
-description: >
-  The logo component displays the site logo.
-
-properties:
-  modifier:
-    type: string
-    description: Modifier class for the logo container
-    default: ""
-  site_logo:
-    type: string
-    description: URL of the site logo image
-    default: ""
-
-default:
-  modifier: "col-3"
-  site_logo: "./images/logo.svg"
+status: experimental
+description: 'Logo component for the site, allowing customization through modifiers and different logo images'
+props:
+  type: object
+  properties:
+    modifier:
+      type: string
+      title: Modifier
+      description: CSS modifier for the logo component.
+      default: 'col-3'
+    site_logo:
+      type: string
+      title: Site Logo
+      description: URL for the site logo image.
+      default: './images/logo.svg'
+    logo_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: A list of HTML attributes for the logo element.
+slots:
+  content:
+    title: Content
+    description: Placeholder for the logo content.
