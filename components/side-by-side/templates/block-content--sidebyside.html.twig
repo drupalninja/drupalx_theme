@@ -37,7 +37,7 @@
 
   {% block content %}
     {%
-      include '@drupalx_theme/01 - editorial/side-by-side/side-by-side.twig' with {
+      include 'drupalx_theme:side-by-side' with {
         title: content.field_title|field_value,
         eyebrow: content.field_eyebrow|field_value,
         body: content.field_summary,

@@ -8,7 +8,7 @@
  * @ingroup themeable
  */
 #}
-{% embed '@drupalx_theme/01 - editorial/accordion/accordion-item.twig' with {
+{% embed 'drupalx_theme:accordion' with {
   "item": {
     "heading": content.field_title|field_value,
     "accordion_instance": paragraph.id(),

@@ -23,7 +23,7 @@
   {{ title_prefix }}
   {{ title_suffix }}
   {% block content %}
-    {% embed '@drupalx_theme/01 - editorial/gallery-lightbox/gallery-lightbox.twig' with {
+    {% embed 'drupalx_theme:gallery-lightbox' with {
         section_title: content.field_title|field_value,
         intro_text: content.body,
         content: content

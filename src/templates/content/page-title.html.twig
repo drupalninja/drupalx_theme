@@ -15,7 +15,7 @@
 {% if title %}
   <div class="container {{ hide ? 'd-none' : '' }} mb-8">
     {%
-      include '@drupalx_theme/03 - general/heading/heading.twig' with {
+      include 'drupalx_theme:heading' with {
         "heading": {
           "title": title,
           "heading_level": 1,

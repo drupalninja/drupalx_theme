@@ -7,7 +7,7 @@
 {% if items %}
   <div class="mb-6 mb-lg-12">
     {%
-      include '@drupalx_theme/04 - navigation/pager/pager.twig' with {
+      include 'drupalx_theme:pager' with {
         items: items,
         current: current
       } only

@@ -9,13 +9,13 @@
     </div>
     <div class="col-lg-6 col-xxl-5 d-flex flex-column gap-3">
       {% if eyebrow %}
-        {% include '@drupalx_theme/03 - general/badge/badge.twig' with {
+        {% include 'drupalx_theme:badge' with {
           tag: eyebrow,
           modifier: 'text-bg-secondary text-uppercase'
         } only %}
       {% endif %}
       {%
-        include '@drupalx_theme/03 - general/heading/heading.twig' with {
+        include 'drupalx_theme:heading' with {
           heading: {
             title: title,
             heading_level: 2,
@@ -29,7 +29,7 @@
         {% endif %}
       </div>
         {% if button.url %}
-          {% include '@drupalx_theme/03 - general/button/button.twig' with {
+          {% include 'drupalx_theme:button' with {
             button: {
               url: button.url,
               text: button.text,

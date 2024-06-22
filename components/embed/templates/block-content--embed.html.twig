@@ -24,7 +24,7 @@
   {{ title_suffix }}
   {% if (content.field_title) %}
     {%
-      include '@drupalx_theme/03 - general/heading/heading.twig' with {
+      include 'drupalx_theme:heading' with {
         "heading": {
           "title": content.field_title|field_value,
           "heading_level": "2",
@@ -36,7 +36,7 @@
 
   {% block content %}
     {%
-      include '@drupalx_theme/01 - editorial/embed/embed.twig' with {
+      include 'drupalx_theme:embed' with {
         embed: content.field_script|field_value,
       } only
     %}

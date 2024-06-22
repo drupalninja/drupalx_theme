@@ -5,7 +5,7 @@
     {% block carousel_items %}
       {% for item in list %}
         {%
-          include '@drupalx_theme/01 - editorial/carousel/carousel-item.twig' with {
+          include 'drupalx_theme:carousel' with {
             "id": id,
             "item": item
           } only

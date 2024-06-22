@@ -3,7 +3,7 @@
 <div class="{{ modifier }}">
   {% if section_title %}
     {%
-      include '@drupalx_theme/03 - general/heading/heading.twig' with {
+      include 'drupalx_theme:heading' with {
         "heading": {
           "title": section_title,
           "heading_level": 2,
@@ -16,7 +16,7 @@
   <div class="d-flex justify-content-center">
     {% if intro_text %}
       {%
-        include '@drupalx_theme/03 - general/rich-text/rich-text.twig' with {
+        include 'drupalx_theme:rich-text' with {
           "body_text": intro_text,
           "modifier": "text-md-center pb-3 col-md-8"
         } only
@@ -28,7 +28,7 @@
     {% block gallery_items %}
       {% for item in items %}
         {%
-          include '@drupalx_theme/01 - editorial/gallery-lightbox/gallery-lightbox-item.twig' with {
+          include 'drupalx_theme:gallery-lightbox' with {
             "media": item.media,
             "media_thumb": item.media_thumb,
             "media_description": item.media_description,

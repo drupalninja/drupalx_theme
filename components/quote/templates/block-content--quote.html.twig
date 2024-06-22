@@ -23,7 +23,7 @@
   {{ title_prefix }}
   {{ title_suffix }}
   {% block content %}
-    {% include '@drupalx_theme/01 - editorial/quote/quote.twig' with {
+    {% include 'drupalx_theme:quote' with {
       "quote": {
         "modifier_class": "",
         "logo": content.field_logo.0,

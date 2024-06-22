@@ -18,7 +18,7 @@
       <ul class="list-inline mb-2">
         {% for tag in card.tags %}
           <li class="list-inline-item">
-            {% include '@drupalx_theme/03 - general/badge/badge.twig' with {
+            {% include 'drupalx_theme:badge' with {
               "tag": tag,
               "modifier": 'text-bg-primary'
             } only %}
@@ -27,7 +27,7 @@
       </ul>
     {% endif %}
     {%
-      include '@drupalx_theme/03 - general/heading/heading.twig' with {
+      include 'drupalx_theme:heading' with {
         "heading": card.heading
       } only
     %}
@@ -40,7 +40,7 @@
       <ul class="list-inline mb-0">
         {% if card.link.url %}
           <li class="list-inline-item">
-            {% include '@drupalx_theme/03 - general/button/button.twig' with {
+            {% include 'drupalx_theme:button' with {
               "button": {
                 "url": card.link.url,
                 "text": card.link.text,
@@ -52,7 +52,7 @@
         {% endif %}
         {% if card.link2.url %}
           <li class="list-inline-item">
-            {% include '@drupalx_theme/03 - general/button/button.twig' with {
+            {% include 'drupalx_theme:button' with {
               "button": {
                 "url": card.link2.url,
                 "text": card.link2.text,

@@ -19,7 +19,7 @@
   {{ title_prefix }}
   {{ title_suffix }}
 
-  {% embed '@drupalx_theme/03 - general/site-footer/site-footer.twig' with { content: content, site_logo: site_logo, modifier: "" } only %}
+  {% embed 'drupalx_theme:site-footer' with { content: content, site_logo: site_logo, modifier: "" } only %}
 
     {% block content %}
       {{ content }}

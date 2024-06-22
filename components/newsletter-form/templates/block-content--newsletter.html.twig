@@ -20,7 +20,7 @@
   {{ title_suffix }}
 
   {% block content %}
-    {% include '@drupalx_theme/01 - editorial/newsletter-form/newsletter-form.twig' with {
+    {% include 'drupalx_theme:newsletter-form' with {
       "modifier": "container",
     } only %}
   {% endblock %}
