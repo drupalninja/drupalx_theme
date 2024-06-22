@@ -12,7 +12,7 @@ export default {
       description: 'Optional intro text for the gallery lightbox component',
       control: 'text'
     },
-    items: {
+    gallery_items: {
       description: 'Define the array of gallery lightbox items',
       control: 'array',
       type: {
@@ -33,7 +33,7 @@ Gallery.args = {
   modifier: 'p-2',
   intro_text:
     '<p>Optional summary text, turpis at luctus finibus, erat lectus convallis velit, at sodales purus lacus quis magna. Curabitur imperdiet sapien libero, fringilla ullamcorper nibh ullamcorper vitae. Proin sed luctus augue.</p>',
-  items: [
+  gallery_items: [
     {
       id: 'exampleLightbox1',
       media:

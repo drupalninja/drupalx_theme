@@ -1,5 +1,5 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Hero
-status: experimental
 description: 'Hero component for Editorial use.'
 props:
   type: object
@@ -72,3 +72,8 @@ props:
           title: Icon
           description: Icon for the button.
           default: 'arrow_right_alt'
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/button
+    - drupalx_theme/heading
