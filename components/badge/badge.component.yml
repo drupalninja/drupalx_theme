@@ -1,0 +1,19 @@
+name: badge
+description: >
+  A badge component used to display a small piece of information with optional modifiers.
+
+properties:
+  tag:
+    type: string
+    description: The content of the badge.
+    default: "New feature"
+    required: true
+  modifier:
+    type: string
+    description: CSS class modifier for the badge.
+    default: "text-bg-primary"
+    required: false
+
+default:
+  tag: "New feature"
+  modifier: "text-bg-primary"

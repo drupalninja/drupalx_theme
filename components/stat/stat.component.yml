@@ -14,7 +14,7 @@ properties:
   media:
     type: string
     description: Stat media
-    default: "<span class="material-symbols-outlined display-1">monitoring</span>"
+    default: '<span class="material-symbols-outlined display-1">monitoring</span>'
   modifier:
     type: string
     description: Modifier classes for the stat component
@@ -23,5 +23,5 @@ properties:
 default:
   heading: "This is small heading"
   body: "Vestibulum fringilla pede sit amet augue. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede."
-  media: "<span class="material-symbols-outlined display-1">monitoring</span>"
+  media: '<span class="material-symbols-outlined display-1">monitoring</span>'
   modifier: "col-4"
