@@ -14,8 +14,8 @@
     {% include 'drupalx_theme:stat' with {
         modifier: '',
         media: content.field_custom_icon|field_value ? content.field_custom_icon : content.field_icon,
-        heading: content.field_title|field_value,
-        body: content.field_summary|field_value,
+        heading: content.field_title|render,
+        body: content.field_summary|render,
       } only
     %}
   {% endblock %}

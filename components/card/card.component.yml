@@ -1,3 +1,4 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Card
 status: experimental
 description: 'Card component, displays a card with an image, heading, text, and links.'
@@ -98,7 +99,9 @@ props:
           title: Text
           description: The text for the second link.
           default: 'Link 2'
-slots:
-  content:
-    title: Content
-    description: Default content text for the card.
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/badge
+    - drupalx_theme/button
+    - drupalx_theme/heading

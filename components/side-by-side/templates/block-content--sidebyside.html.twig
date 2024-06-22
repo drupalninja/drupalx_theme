@@ -38,8 +38,8 @@
   {% block content %}
     {%
       include 'drupalx_theme:side-by-side' with {
-        title: content.field_title|field_value,
-        eyebrow: content.field_eyebrow|field_value,
+        title: content.field_title|render,
+        eyebrow: content.field_eyebrow|render,
         body: content.field_summary,
         button: link,
         media: content.field_media,

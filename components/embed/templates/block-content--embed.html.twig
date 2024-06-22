@@ -26,7 +26,7 @@
     {%
       include 'drupalx_theme:heading' with {
         "heading": {
-          "title": content.field_title|field_value|render,
+          "title": content.field_title|render,
           "heading_level": "2",
           "modifier": "mb-2 mb-lg-6",
         },
@@ -37,7 +37,7 @@
   {% block content %}
     {%
       include 'drupalx_theme:embed' with {
-        embed: content.field_script|field_value,
+        embed: content.field_script|render,
       } only
     %}
   {% endblock %}

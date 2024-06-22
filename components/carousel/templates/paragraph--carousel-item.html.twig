@@ -12,7 +12,7 @@
   "id": parent.id(),
   "item": {
     "image": content.field_media,
-    "title": content.field_title|field_value,
-    "caption": content.field_summary|field_value
+    "title": content.field_title|render,
+    "caption": content.field_summary|render
   }
 } only %}

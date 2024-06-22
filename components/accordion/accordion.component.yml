@@ -30,3 +30,8 @@ props:
             title: Accordion Instance
             description: Unique identifier for the accordion item.
             default: ''
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js
+    - drupalx_theme/heading

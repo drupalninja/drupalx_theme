@@ -24,8 +24,8 @@
   {% block content %}
     {% include 'drupalx_theme:hero' with {
       media: content.field_media|render,
-      title: content.field_heading|field_value,
-      body_text: content.field_summary|field_value|default(''),
+      title: content.field_heading|render,
+      body_text: content.field_summary|render,
       layout: content.field_hero_layout['#items'].getString(),
       button: {
         text: content.field_link[0]['#title']|render,
