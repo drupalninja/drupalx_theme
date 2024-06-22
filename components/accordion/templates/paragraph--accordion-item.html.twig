@@ -10,7 +10,7 @@
 #}
 {% embed '@drupalx_theme/accordion/accordion-item.twig' with {
   "item": {
-    "heading": content.field_title|field_value,
+    "heading": content.field_title|field_value|render,
     "accordion_instance": paragraph.id(),
   },
   "content": content

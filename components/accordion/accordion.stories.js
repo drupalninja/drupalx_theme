@@ -8,7 +8,7 @@ export default {
       control: 'text',
       description: 'Modifier class for the accordion group'
     },
-    items: {
+    accordion_items: {
       description:
         'Define the list of items containing the title and content of each accordion',
       control: 'object',
@@ -23,7 +23,7 @@ export const AccordionGroup = AccordionTemplate.bind({});
 
 AccordionGroup.args = {
   modifier: '',
-  items: [
+  accordion_items: [
     {
       heading: 'Curabitur aliquet quam id dui posuere blandit.',
       content:

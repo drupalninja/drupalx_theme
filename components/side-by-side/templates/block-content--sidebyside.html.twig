@@ -20,8 +20,8 @@
 
 {%
   set link = {
-    url: content.field_link[0]['#url'],
-    text: content.field_link[0]['#title'],
+    url: content.field_link[0]['#url']|render,
+    text: content.field_link[0]['#title']|render,
     icon: 'arrow_right_alt',
     modifier: 'btn-primary',
   }

@@ -22,7 +22,7 @@ props:
             description: Title of the menu item.
             default: ''
     attributes:
-      type: object
+      type: Drupal\Core\Template\Attribute
       title: Attributes
       description: Define the HTML attributes for the menu.
     modifier:

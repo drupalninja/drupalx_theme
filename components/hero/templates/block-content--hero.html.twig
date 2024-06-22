@@ -25,17 +25,17 @@
     {% include 'drupalx_theme:hero' with {
       media: content.field_media|render,
       title: content.field_heading|field_value,
-      body_text: content.field_summary|field_value,
+      body_text: content.field_summary|field_value|default(''),
       layout: content.field_hero_layout['#items'].getString(),
       button: {
-        text: content.field_link[0]['#title'],
-        url: content.field_link[0]['#url'],
+        text: content.field_link[0]['#title']|render,
+        url: content.field_link[0]['#url']|render,
         modifier: 'btn-primary',
         icon: 'arrow_right_alt',
       },
       button2: {
-        text: content.field_link2[0]['#title'],
-        url: content.field_link2[0]['#url'],
+        text: content.field_link2[0]['#title']|render,
+        url: content.field_link2[0]['#url']|render,
         modifier: 'btn-outline-primary',
         icon: 'arrow_right_alt',
       },

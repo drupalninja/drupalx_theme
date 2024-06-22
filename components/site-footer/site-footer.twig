@@ -14,7 +14,8 @@
               include '@drupalx_theme/menu/menu.twig' with {
                 modifier: "d-lg-flex justify-content-lg-end",
                 items: links,
-                item_modifier: link_item_modifier
+                item_modifier: link_item_modifier,
+                attributes: attributes
               } only
             %}
           {% endblock %}

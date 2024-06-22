@@ -1,3 +1,4 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Accordion Group
 status: experimental
 description: 'Accordion group component for displaying collapsible content sections.'
@@ -8,13 +9,24 @@ props:
       type: string
       title: Modifier
       description: Modifier class for the accordion group.
-      default: ''
-    items:
+    accordion_items:
       type: array
       title: Items
-      description: An array of items inside the accordion. Each item is an object that has heading, content, and accordion_instance properties.
+      description: List of accordion items.
       default: [{}]
-slots:
-  content:
-    title: Content
-    description: Default content text for the accordion items.
+      items:
+        type: object
+        properties:
+          heading:
+            type: string
+            title: Title
+            description: Title of the accordion item.
+          content:
+            type: string
+            title: Content
+            description: Content of the accordion item.
+          accordion_instance:
+            type: string
+            title: Accordion Instance
+            description: Unique identifier for the accordion item.
+            default: ''

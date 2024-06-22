@@ -26,7 +26,7 @@
     {%
       include 'drupalx_theme:heading' with {
         "heading": {
-          "title": content.field_title|field_value,
+          "title": content.field_title|field_value|render,
           "heading_level": "2",
           "modifier": "mb-2 mb-lg-6",
         },

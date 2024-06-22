@@ -10,7 +10,7 @@
 #}
 {% set
   heading_content = {
-    title: content.field_title|field_value,
+    title: content.field_title|field_value|render,
     icon: content.field_icon,
     heading_level: '3',
     modifier: 'mb-3'

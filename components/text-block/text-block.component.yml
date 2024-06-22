@@ -3,6 +3,8 @@ status: experimental
 description: 'Text Block component used in editorial theming.'
 props:
   type: object
+  required:
+    - body_text
   properties:
     body_text:
       type: string
@@ -40,7 +42,3 @@ props:
       title: Modifier
       description: Define the Text Block modifier class.
       default: 'col-10 p-4'
-slots:
-  content:
-    title: Content
-    description: Default content for the Text Block component.

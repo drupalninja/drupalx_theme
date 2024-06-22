@@ -26,11 +26,11 @@
     {% include 'drupalx_theme:quote' with {
       "quote": {
         "modifier_class": "",
-        "logo": content.field_logo.0,
-        "quote": content.field_quote.0,
-        "image": content.field_thumb.0,
-        "name": content.field_author.0,
-        "job": content.field_job_title.0,
+        "logo": content.field_logo|render,
+        "quote": content.field_quote|render,
+        "image": content.field_thumb|render,
+        "name": content.field_author|render,
+        "job": content.field_job_title|render,
         "layout": "left",
       }
     } only %}

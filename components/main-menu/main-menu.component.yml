@@ -1,3 +1,4 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Main Menu
 status: experimental
 description: 'Main menu component for site navigation.'
@@ -63,7 +64,3 @@ props:
                   title: URL
                   description: 'The link URL for the sub-menu item.'
                   default: '#'
-slots:
-  content:
-    title: Content
-    description: Default content text for the main menu.

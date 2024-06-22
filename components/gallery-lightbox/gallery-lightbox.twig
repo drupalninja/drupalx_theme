@@ -16,7 +16,7 @@
     {% if intro_text %}
       {%
         include '@drupalx_theme/rich-text/rich-text.twig' with {
-          "body_text": intro_text,
+          "body_text": intro_text ?? '',
           "modifier": "text-md-center pb-3 col-md-8"
         } only
       %}

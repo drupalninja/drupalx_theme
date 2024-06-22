@@ -34,8 +34,8 @@ export default {
       description: 'Controls image left/right placement.',
       control: 'select',
       options: {
-        'Pin image left': 'sb-only left',
-        'Pin image right': 'sb-only right'
+        'Pin image left': 'left',
+        'Pin image right': 'right'
       }
     }
   }
@@ -54,7 +54,7 @@ Left.args = {
     icon: 'arrow_right_alt',
     modifier: 'btn-primary has-icon'
   },
-  modifier: 'sb-only left'
+  modifier: 'left'
 };
 
 export const Right = SideBySideTemplate.bind({});
@@ -70,5 +70,5 @@ Right.args = {
     icon: 'arrow_right_alt',
     modifier: 'btn-primary has-icon'
   },
-  modifier: 'sb-only right'
+  modifier: 'right'
 };

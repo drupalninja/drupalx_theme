@@ -54,6 +54,7 @@ props:
       title: Modifier
       description: Controls image left/right placement.
       enum:
-        - 'sb-only left'
-        - 'sb-only right'
-      default: 'sb-only left'
+        - 'left'
+        - 'right'
+      default: 'left'
+

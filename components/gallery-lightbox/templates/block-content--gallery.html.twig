@@ -24,7 +24,7 @@
   {{ title_suffix }}
   {% block content %}
     {% embed 'drupalx_theme:gallery-lightbox' with {
-        section_title: content.field_title|field_value,
+        section_title: content.field_title|field_value|default(''),
         intro_text: content.body,
         content: content
       } only %}

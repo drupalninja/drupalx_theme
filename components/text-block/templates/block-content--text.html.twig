@@ -27,7 +27,7 @@
     {%
       include 'drupalx_theme:text-block' with {
         heading: {
-          "title": content.field_title|field_value,
+          "title": content.field_title|field_value|render,
           "heading_level": "2",
           "modifier": "mb-2",
         },
