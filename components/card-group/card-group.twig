@@ -1,7 +1,7 @@
 
 {% if section_title %}
   {%
-    include 'drupalx_theme:heading' with {
+    include '@drupalx_theme/heading/heading.twig' with {
       "heading": {
         "title": section_title,
         "heading_level": 2,
@@ -17,12 +17,12 @@
       <div class="col-sm-6 col-lg-4 mb-4">
         {% if item.card %}
           {%
-            include 'drupalx_theme:card' with {
+            include '@drupalx_theme/card/card.twig' with {
               "card": item.card
             } only
           %}
         {% else %}
-          {% include 'drupalx_theme:stat' with {
+          {% include '@drupalx_theme/stat/stat.twig' with {
               modifier: item.modifier,
               media: item.media,
               heading: item.heading,
