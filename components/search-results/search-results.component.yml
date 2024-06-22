@@ -1,10 +1,10 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Search Results
-status: experimental
 description: 'Component to display search results in a list format.'
 props:
   type: object
   properties:
-    items:
+    results:
       type: array
       title: Items
       description: An array of search results. Each item is an object containing title, image, summary, and link properties.

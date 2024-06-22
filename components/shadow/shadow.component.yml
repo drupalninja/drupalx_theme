@@ -1,16 +1,4 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Shadow
 status: experimental
 description: 'Shadow component for general use cases.'
-props:
-  type: object
-  properties:
-    shadow_level:
-      type: string
-      title: Shadow Level
-      description: Sets the level of shadow effect.
-      enum:
-        - none
-        - small
-        - medium
-        - large
-      default: none

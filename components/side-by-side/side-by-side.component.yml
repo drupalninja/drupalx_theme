@@ -1,5 +1,5 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Side-By-Side
-status: experimental
 description: 'Side-by-Side component for displaying media and text content side by side.'
 props:
   type: object
@@ -58,3 +58,7 @@ props:
         - 'right'
       default: 'left'
 
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/button
+    - drupalx_theme/heading

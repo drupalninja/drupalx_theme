@@ -1,36 +1,3 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Search Box
-status: experimental
 description: 'Search Box component for data entry, allowing users to input and search text.'
-props:
-  type: object
-  properties:
-    placeholder:
-      type: string
-      title: Placeholder
-      description: Placeholder text for the search box input field.
-      default: 'Search...'
-    id:
-      type: ['integer', 'string']
-      title: ID
-      description: Unique ID for the search box component.
-      default: ''
-    size:
-      type: string
-      title: Size
-      description: Size of the search box input field.
-      enum:
-        - small
-        - medium
-        - large
-      default: medium
-    input_attributes:
-      type: Drupal\Core\Template\Attribute
-      title: Input Attributes
-      description: A list of HTML attributes for the input element.
-actions:
-  type: object
-  properties:
-    onSubmit:
-      type: string
-      title: On Submit
-      description: JavaScript function to call when the search form is submitted.

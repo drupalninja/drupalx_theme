@@ -1,12 +1,15 @@
 import SearchResultsTemplate from './search-results.twig';
 
 export default {
-  title: 'Content Display/Search Results'
+  title: 'Content Display/Search Results',
+  argTypes: {
+    results: { control: 'object' }
+  }
 };
 
 export const SearchResults = SearchResultsTemplate.bind({});
 SearchResults.args = {
-  items: [
+  results: [
     {
       title: 'What are the biggest challenges to starting a business?',
       image:

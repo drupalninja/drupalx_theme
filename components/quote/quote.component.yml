@@ -1,5 +1,5 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Quote
-status: experimental
 description: 'Quote component with various fields such as logo, quote text, image, name, job title, and layout.'
 props:
   type: object
