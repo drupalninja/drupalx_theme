@@ -3,7 +3,7 @@
     Inline navigation
   </button>
   <ul class="dropdown-menu">
-    {% for item in items %}
+    {% for item in nav_items %}
       <li><a class="dropdown-item" href="{{ item.url }}">{{ item.text }}</a></li>
     {% endfor %}
   </ul>

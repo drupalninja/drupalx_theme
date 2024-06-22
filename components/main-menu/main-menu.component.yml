@@ -1,6 +1,5 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Main Menu
-status: experimental
 description: 'Main menu component for site navigation.'
 props:
   type: object
@@ -20,7 +19,7 @@ props:
       title: Site Logo
       description: 'URL for the site logo.'
       default: './images/logo.svg'
-    items:
+    menu_items:
       type: array
       title: Items
       description: 'Define the array of main menu items.'

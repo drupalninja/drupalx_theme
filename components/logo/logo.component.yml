@@ -1,5 +1,5 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Logo
-status: experimental
 description: 'Logo component for the site, allowing customization through modifiers and different logo images'
 props:
   type: object

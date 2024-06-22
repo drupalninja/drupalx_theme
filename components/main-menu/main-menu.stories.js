@@ -20,7 +20,7 @@ MainNavigation.args = {
   modifier: '',
   link_modifier: 'text-dark',
   site_logo: './images/logo.svg',
-  items: [
+  menu_items: [
     {
       title: 'Home',
       url: '#',

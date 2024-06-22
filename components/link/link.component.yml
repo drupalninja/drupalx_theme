@@ -1,30 +1,3 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Link
-status: experimental
 description: 'Link component'
-props:
-  type: object
-  properties:
-    url:
-      type: string
-      title: URL
-      description: The href URL for the link.
-      default: '#'
-    text:
-      type: string
-      title: Text
-      description: The text content of the link.
-      default: 'Click here'
-    target:
-      type: string
-      title: Target
-      description: HTML target attribute specifying where to open the linked document.
-      enum:
-        - _self
-        - _blank
-        - _parent
-        - _top
-      default: _self
-    link_attributes:
-      type: Drupal\Core\Template\Attribute
-      title: Attributes
-      description: A list of HTML attributes for the link.
