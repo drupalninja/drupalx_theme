@@ -40,7 +40,3 @@ props:
             - left
             - right
           default: left
-slots:
-  content:
-    title: Content
-    description: Default content text for the quote component.

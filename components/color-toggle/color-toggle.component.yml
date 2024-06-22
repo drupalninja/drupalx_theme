@@ -24,7 +24,3 @@ props:
       title: Switch Icon Element
       description: The CSS selector for the switch icon element.
       default: '.darkmode-switch .material-symbols-outlined'
-slots:
-  content:
-    title: Content
-    description: Default content for the Color Mode Toggle component.

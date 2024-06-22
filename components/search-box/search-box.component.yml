@@ -34,7 +34,3 @@ actions:
       type: string
       title: On Submit
       description: JavaScript function to call when the search form is submitted.
-slots:
-  input:
-    title: Input
-    description: Input field for the search box where users can enter search terms.

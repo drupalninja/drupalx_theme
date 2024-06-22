@@ -9,7 +9,3 @@ props:
       title: Modifier
       description: 'The modifier class to apply to the newsletter form component.'
       default: 'border p-4 rounded'
-slots:
-  content:
-    title: Content
-    description: 'The HTML content included within the Newsletter Form.'

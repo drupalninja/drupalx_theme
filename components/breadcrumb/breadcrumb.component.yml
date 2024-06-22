@@ -1,5 +1,5 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Breadcrumb
-status: experimental
 description: 'Breadcrumb navigation component with a predefined structure of links.'
 props:
   type: object
@@ -28,7 +28,3 @@ props:
             title: URL
             description: The URL for the breadcrumb item. If empty, it indicates the current page.
             default: ''
-slots:
-  content:
-    title: Content
-    description: Breadcrumb content.

@@ -35,7 +35,3 @@ props:
             title: Caption
             description: Caption text for the slide.
             default: ''
-slots:
-  content:
-    title: Content
-    description: Default content text for the carousel.

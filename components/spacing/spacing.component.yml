@@ -32,7 +32,3 @@ props:
         - right
         - all
       default: all
-slots:
-  content:
-    title: Content
-    description: Content inside the spacing container.

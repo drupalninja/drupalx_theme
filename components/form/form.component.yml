@@ -31,7 +31,3 @@ props:
       type: Drupal\Core\Template\Attribute
       title: Form Attributes
       description: A list of HTML attributes for the form.
-slots:
-  content:
-    title: Form Content
-    description: Default content slot for the form.

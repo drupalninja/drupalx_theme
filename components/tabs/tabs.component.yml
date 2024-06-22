@@ -31,7 +31,3 @@ props:
             title: Disabled
             description: True if this tab is disabled.
             default: false
-slots:
-  content:
-    title: Content
-    description: Default content text for the tab.

@@ -39,30 +39,3 @@ props:
       title: Modifier
       description: Define the modal modifier class for button.
       default: 'btn-primary'
-slots:
-  button1:
-    type: object
-    properties:
-      text:
-        type: string
-        title: Button 1 Text
-        description: Text for the first button.
-        default: 'Close'
-  button2:
-    type: object
-    properties:
-      text:
-        type: string
-        title: Button 2 Text
-        description: Text for the second button.
-        default: 'Save Changes'
-      url:
-        type: string
-        title: Button 2 URL
-        description: URL for the second button.
-        default: 'http://drupal.org/'
-trigger_button_text:
-  type: string
-  title: Trigger Button Text
-  description: Text for the modal trigger button.
-  default: 'Launch demo modal'

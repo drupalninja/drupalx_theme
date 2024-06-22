@@ -24,7 +24,4 @@ props:
       title: ID
       description: Unique ID for the toggle component.
       default: 0
-slots:
-  content:
-    title: Content
-    description: Default content text for the toggle.
+

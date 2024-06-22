@@ -14,7 +14,3 @@ props:
         - medium
         - large
       default: none
-slots:
-  content:
-    title: Content
-    description: Content that will be displayed with the shadow effect.

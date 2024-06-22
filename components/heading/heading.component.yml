@@ -30,7 +30,3 @@ props:
       type: Drupal\Core\Template\Attribute
       title: Attributes
       description: A list of HTML attributes for the heading.
-slots:
-  content:
-    title: Content
-    description: Default content text for the heading.

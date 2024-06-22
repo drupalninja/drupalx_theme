@@ -1,6 +1,5 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Card
-status: experimental
 description: 'Card component, displays a card with an image, heading, text, and links.'
 props:
   type: object

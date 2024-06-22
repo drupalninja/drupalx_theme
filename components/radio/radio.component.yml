@@ -33,7 +33,3 @@ props:
       type: Drupal\Core\Template\Attribute
       title: Attributes
       description: A list of HTML attributes for the radio button.
-slots:
-  content:
-    title: Content
-    description: Default content text for the radio button.

@@ -38,7 +38,3 @@ props:
       type: Drupal\Core\Template\Attribute
       title: Attributes
       description: A list of HTML attributes for the checkbox.
-slots:
-  content:
-    title: Content
-    description: Additional content for the checkbox label.

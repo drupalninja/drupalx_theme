@@ -8,7 +8,7 @@ export default {
       description: 'The title of the card list component',
       control: 'text'
     },
-    items: {
+    card_items: {
       description: 'Array of the card list item content',
       control: 'object',
       type: {
@@ -22,7 +22,7 @@ export const CardGroup = CardGroupTemplate.bind({});
 
 CardGroup.args = {
   section_title: 'Latest Articles',
-  items: [
+  card_items: [
     {
       card: {
         modifier: '',

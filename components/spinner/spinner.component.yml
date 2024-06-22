@@ -34,7 +34,3 @@ props:
       title: Additional Classes
       description: Additional classes for custom styling.
       default: []
-slots:
-  default:
-    title: Default
-    description: Default slot for additional content inside the spinner if necessary.

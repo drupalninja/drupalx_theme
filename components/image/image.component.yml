@@ -14,7 +14,3 @@ props:
       title: Alt Text
       description: Alternative text for the image.
       default: ''
-slots:
-  content:
-    title: Content
-    description: Default content text for the image component.

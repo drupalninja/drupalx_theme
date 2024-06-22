@@ -1,5 +1,4 @@
 name: Utility Nav
-status: experimental
 description: 'Utility navigation component with links.'
 props:
   type: object
@@ -21,17 +20,13 @@ props:
             title: Text
             description: The text for the link.
             default: 'Link text'
-      default: 
-        - 
+      default:
+        -
           url: '#'
           text: 'Link 1'
-        - 
+        -
           url: '#'
           text: 'Link 2'
-        - 
+        -
           url: '#'
           text: 'Link 3'
-slots:
-  content:
-    title: Content
-    description: Content inside the utility nav.

@@ -35,7 +35,3 @@ props:
       title: Item Modifier
       description: Define the list item modifier for the menu.
       default: ''
-slots:
-  items:
-    title: Menu Items
-    description: Default menu items.

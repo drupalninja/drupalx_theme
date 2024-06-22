@@ -1,5 +1,5 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Card Group
-status: experimental
 description: 'Card Group component'
 props:
   type: object
@@ -9,7 +9,7 @@ props:
       title: Section Title
       description: The title of the card list component.
       default: ''
-    items:
+    card_items:
       type: array
       title: Items
       description: Array of the card list item content.
@@ -97,7 +97,9 @@ props:
                     title: Text
                     description: The text for the second link.
                     default: 'Link 2'
-slots:
-  content:
-    title: Content
-    description: Default content text for the card group.
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/card
+    - drupalx_theme/heading
+    - drupalx_theme/stat

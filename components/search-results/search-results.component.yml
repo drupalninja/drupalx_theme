@@ -32,7 +32,3 @@ props:
             title: Link
             description: The URL link for the search result item.
             default: ''
-slots:
-  content:
-    title: Content
-    description: Default content for the search results list.
