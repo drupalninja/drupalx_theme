@@ -1,50 +1,5 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: tooltip
-status: experimental
 description: >
   Tooltip component that can show additional information on hover or focus.
   See Bootstrap Documentation: https://getbootstrap.com/docs/5.3/components/tooltips/
-props:
-  type: object
-  properties:
-    content:
-      type: string
-      title: Content
-      description: The text or HTML that will be displayed inside the tooltip.
-      default: ''
-    position:
-      type: string
-      title: Position
-      description: The position of the tooltip relative to the element.
-      enum:
-        - top
-        - bottom
-        - left
-        - right
-      default: top
-    trigger:
-      type: array
-      items:
-        type: string
-      title: Trigger Events
-      description: Events that will trigger the tooltip.
-      default:
-        - hover
-        - focus
-    delay:
-      type: object
-      title: Delay
-      description: Delay showing and hiding the tooltip (ms).
-      properties:
-        show:
-          type: integer
-          title: Show Delay
-          default: 0
-        hide:
-          type: integer
-          title: Hide Delay
-          default: 0
-    attributes:
-      type: Drupal\Core\Template\Attribute
-      title: Attributes
-      description: A list of HTML attributes for the tooltip.
-

@@ -1,5 +1,5 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Text Block
-status: experimental
 description: 'Text Block component used in editorial theming.'
 props:
   type: object
@@ -42,3 +42,8 @@ props:
       title: Modifier
       description: Define the Text Block modifier class.
       default: 'col-10 p-4'
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/button
+    - drupalx_theme/heading

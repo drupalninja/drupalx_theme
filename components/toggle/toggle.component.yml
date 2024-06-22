@@ -1,27 +1,3 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Toggle
-status: experimental
 description: 'Toggle component for data entry.'
-props:
-  type: object
-  properties:
-    state:
-      type: boolean
-      title: State
-      description: The state of the toggle, true for on and false for off.
-      default: false
-    disabled:
-      type: boolean
-      title: Disabled
-      description: Whether the toggle is disabled.
-      default: false
-    label:
-      type: string
-      title: Label
-      description: Text label for the toggle.
-      default: 'Toggle'
-    id:
-      type: ['integer', 'string']
-      title: ID
-      description: Unique ID for the toggle component.
-      default: 0
-

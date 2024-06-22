@@ -2,7 +2,12 @@ import UtilityNavTemplate from './utility-nav.twig';
 
 export default {
   title: 'Navigation/Utility Nav',
-  argTypes: {}
+  argTypes: {
+    links: {
+      description: 'Define the Utility Nav links.',
+      control: 'array'
+    }
+  }
 };
 
 export const UtilityNav = UtilityNavTemplate.bind({});
