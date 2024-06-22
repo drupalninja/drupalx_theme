@@ -10,7 +10,7 @@
 #}
 {% if content %}
   {%
-    include 'drupalx_theme:gallery-lightbox' with {
+    include '@drupalx_theme/gallery-lightbox/gallery-lightbox-item.twig' with {
       "media": content.field_image|render,
       "media_thumb": content.field_image|render,
       "media_description": "",

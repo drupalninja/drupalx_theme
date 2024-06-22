@@ -5,7 +5,7 @@
     {% block accordion_items %}
       {% for item in items %}
         {%
-          include 'drupalx_theme:accordion' with { item: item } only
+          include '@drupalx_theme/accordion/accordion-item.twig' with { item: item } only
         %}
       {% endfor %}
     {% endblock %}
