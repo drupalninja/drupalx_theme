@@ -1,5 +1,5 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Carousel
-status: experimental
 description: 'Carousel component, used for showcasing a slider of images with captions.'
 props:
   type: object
@@ -35,3 +35,16 @@ props:
             title: Caption
             description: Caption text for the slide.
             default: ''
+
+libraryOverrides:
+  js:
+    carousel.behavior.js: {
+      attributes: {
+        async: false,
+        defer: true
+      }
+    }
+  dependencies:
+    - core/drupal
+    - drupalx_theme/bootstrap-js
+    - drupalx_theme/heading
