@@ -1,0 +1,13 @@
+name: media
+description: >
+  A media component used to display a media item.
+
+properties:
+  media:
+    type: string
+    description: The media item content (e.g., image, video).
+    default: "<img src='./images/card.webp' class='img-fluid rounded' alt='test image' />"
+    required: true
+
+default:
+  media: "<img src='./images/card.webp' class='img-fluid rounded' alt='test image' />"
