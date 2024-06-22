@@ -1,7 +1,7 @@
 
-{% if items %}
+{% if tab_items %}
   <ul class="nav nav-tabs">
-    {% for item in items %}
+    {% for item in tab_items %}
       {% if item.active %}
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{ item.url }}">{{ item.title }}</a>

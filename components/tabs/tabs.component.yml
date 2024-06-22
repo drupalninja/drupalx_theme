@@ -1,10 +1,10 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Tabs
-status: experimental
 description: 'Tabs component, see Bootstrap Documentation: https://getbootstrap.com/docs/5.3/components/navs-tabs/'
 props:
   type: object
   properties:
-    items:
+    tab_items:
       type: array
       title: Items
       description: An array of tab items. Each item is an object that has title, url, active, and disabled properties.

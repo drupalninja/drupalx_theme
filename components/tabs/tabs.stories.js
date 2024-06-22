@@ -2,12 +2,15 @@ import './tabs.scss';
 import TabsTemplate from './tabs.twig';
 
 export default {
-  title: 'Navigation/Tabs'
+  title: 'Navigation/Tabs',
+  argTypes: {
+    tab_items: { control: 'object' }
+  }
 };
 
 export const Tabs = TabsTemplate.bind({});
 Tabs.args = {
-  items: [
+  tab_items: [
     {
       title: 'Active',
       url: '#',
