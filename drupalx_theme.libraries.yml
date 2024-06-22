@@ -19,10 +19,16 @@ fonts-secondary:
       //fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap:
         { type: external, minified: true }
 
+# Included to attach the media component css file with the media component.
+media:
+  css:
+    component:
+      components/media/media.css: { }
+
 global:
   css:
     base:
-      dist/css/bootstrap.css: { weight: 100 }
+      dist/css/bootstrap.css: {  }
   dependencies:
     - "drupalx_theme/icons"
     - "drupalx_theme/fonts"

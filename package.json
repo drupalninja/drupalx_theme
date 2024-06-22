@@ -13,7 +13,7 @@
     "compile": "node compile.js",
     "compress:assets": "imagemin static/images/* --out-dir=dist/images",
     "build": "npm run clean && npm run lint:js && npm run lint:sass && npm run compile && npm run compress:assets",
-    "watch": "chokidar 'components/**/*.{scss}' -c 'node compile.js {path}'",
+    "watch": "chokidar 'components/**/*.scss' -c 'node compile.js {path}'",
     "start": "npm run build && npm run watch",
     "postinstall": "husky install",
     "prepare": "husky install",
