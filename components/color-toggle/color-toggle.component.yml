@@ -1,26 +1,3 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Color Mode Toggle
-status: experimental
 description: 'Color Mode Toggle component to switch between dark and light modes.'
-props:
-  type: object
-  properties:
-    id:
-      type: string
-      title: ID
-      description: ID for the toggle input element.
-      default: 'darkModeSwitch'
-    label:
-      type: string
-      title: Label
-      description: Label for the toggle input element.
-      default: 'Dark Mode Toggle'
-    switch_icon:
-      type: string
-      title: Switch Icon
-      description: Icon for the mode switch.
-      default: 'light_mode'
-    switch_icon_element:
-      type: string
-      title: Switch Icon Element
-      description: The CSS selector for the switch icon element.
-      default: '.darkmode-switch .material-symbols-outlined'
