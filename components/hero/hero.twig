@@ -9,7 +9,7 @@
 
   {% if title %}
     {{
-      include('drupalx_theme:heading', {
+      include('@drupalx_theme/heading/heading.twig', {
         heading: {
           title: title,
           heading_level: 1,
@@ -31,7 +31,7 @@
       <div class="d-grid gap-2 d-flex justify-content-center">
         {% if button.url %}
           {{
-            include('drupalx_theme:button', {
+            include('@drupalx_theme/button/button.twig', {
               button: {
                 text: button.text,
                 url: button.url,
@@ -43,7 +43,7 @@
         {% endif %}
         {% if button2.url %}
           {{
-            include('drupalx_theme:button', {
+            include('@drupalx_theme/button/button.twig', {
               button: {
                 text: button2.text,
                 url: button2.url,
