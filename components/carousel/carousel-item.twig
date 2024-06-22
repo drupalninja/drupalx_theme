@@ -5,7 +5,7 @@
   <div class="carousel-caption d-none d-md-block">
     {% if item.title %}
       {%
-        include 'drupalx_theme:heading' with {
+        include '@drupalx_theme/heading/heading.twig' with {
           "heading": {
             "title": item.title,
             "heading_level": 3,

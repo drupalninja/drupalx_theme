@@ -2,7 +2,7 @@
   {% for item in items %}
     {% block search_item %}
       {%
-        include 'drupalx_theme:search-results' with {
+        include '@drupalx_theme/search-results/search-results.twig' with {
           item: item
         } only
       %}
