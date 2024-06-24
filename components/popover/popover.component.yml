@@ -1,0 +1,49 @@
+name: Popover
+status: experimental
+description: 'Popover component, see Bootstrap Documentation: https://getbootstrap.com/docs/5.3/components/popovers/'
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: Title text for the popover.
+      default: ''
+    content:
+      type: string
+      title: Content
+      description: Content for the popover.
+      default: ''
+    placement:
+      type: string
+      title: Placement
+      description: Positioning of the popover.
+      enum:
+        - top
+        - bottom
+        - left
+        - right
+      default: top
+    trigger:
+      type: string
+      title: Trigger
+      description: How the popover is triggered.
+      enum:
+        - click
+        - hover
+        - focus
+        - manual
+      default: click
+    boundary:
+      type: string
+      title: Boundary
+      description: Element boundary to constrain the popover.
+      enum:
+        - scrollParent
+        - window
+        - viewport
+      default: scrollParent
+    popover_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: A list of HTML attributes for the popover.

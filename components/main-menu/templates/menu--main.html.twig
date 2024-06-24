@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Theme override to display a social menu with icons.
+ */
+#}
+
+{%
+  include 'drupalx_theme:main-menu' with
+    {
+      modifier: '',
+      link_modifier: '',
+      menu_items: items,
+      attributes: attributes,
+    }
+%}

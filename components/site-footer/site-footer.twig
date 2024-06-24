@@ -1,0 +1,26 @@
+
+<div class="bg-black px-2 py-4 {{ modifier }}">
+  <div class="container">
+    <div class="row d-lg-flex flex-wrap justify-content-lg-between align-items-center">
+      <div class="col-lg-3 footer-logo mb-2">
+        {%
+          include '@drupalx_theme/logo/logo.twig' with { site_logo: site_logo } only
+        %}
+      </div>
+      <div class="col-lg-8 text-right justify-lg-content-end">
+        <div class="mb-2">
+          {% block content %}
+            {%
+              include '@drupalx_theme/menu/menu.twig' with {
+                modifier: "d-lg-flex justify-content-lg-end",
+                menu_items: links,
+                item_modifier: link_item_modifier,
+                attributes: attributes
+              } only
+            %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

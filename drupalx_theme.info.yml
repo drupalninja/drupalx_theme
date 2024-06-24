@@ -50,9 +50,8 @@ libraries:
 components:
   namespaces:
     drupalx_theme:
-      - src/stories/global
-      - src/stories/components
-      - src/templates
+      - components
+      - templates
 
 # This section lists the regions defined in the theme (our base theme) default
 # page.html.twig and maintenance-page.html.twig files. The name before

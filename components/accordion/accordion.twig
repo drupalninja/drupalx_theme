@@ -1,0 +1,13 @@
+
+<div class="mb-4 {{ modifier }}">
+
+  <div class="accordion">
+    {% block accordion_items %}
+      {% for item in accordion_items %}
+        {%
+          include '@drupalx_theme/accordion/accordion-item.twig' with { item: item } only
+        %}
+      {% endfor %}
+    {% endblock %}
+  </div>
+</div>

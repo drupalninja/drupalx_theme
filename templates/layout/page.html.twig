@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Theme override to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template in this directory.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+
+<div>
+
+  <header role="banner" class="{{ logged_in ? '' : ' sticky-top' }}">
+    {{ page.primary_menu }}
+  </header>
+
+  {{ page.highlighted }}
+
+  <main role="main" id="main-content" tabindex="-1">
+    <div class="layout-content overflow-hidden">
+      {{ page.content }}
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    {{ page.footer }}
+  </footer>
+
+</div>{# /.layout-container #}

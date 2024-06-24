@@ -1,0 +1,69 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Main Menu
+description: 'Main menu component for site navigation.'
+props:
+  type: object
+  properties:
+    modifier:
+      type: string
+      title: Modifier
+      description: 'CSS modifier for the main menu.'
+      default: ''
+    link_modifier:
+      type: string
+      title: Link Modifier
+      description: 'CSS modifier for the link elements.'
+      default: 'text-dark'
+    site_logo:
+      type: string
+      title: Site Logo
+      description: 'URL for the site logo.'
+      default: './images/logo.svg'
+    menu_items:
+      type: array
+      title: Items
+      description: 'Define the array of main menu items.'
+      items:
+        type: object
+        properties:
+          title:
+            type: string
+            title: Title
+            description: 'The text of the menu item.'
+            default: ''
+          url:
+            type: string
+            title: URL
+            description: 'The link URL for the menu item.'
+            default: '#'
+          in_active_trail:
+            type: boolean
+            title: In Active Trail
+            description: 'Indicates if the menu item is part of the active trail.'
+            default: false
+          is_expanded:
+            type: boolean
+            title: Is Expanded
+            description: 'Indicates if the menu item is expanded to show sub-items.'
+            default: false
+          below:
+            type: array
+            title: Sub-Items
+            description: 'An array of sub-items for the menu item.'
+            items:
+              type: object
+              properties:
+                title:
+                  type: string
+                  title: Title
+                  description: 'The text of the sub-menu item.'
+                  default: ''
+                url:
+                  type: string
+                  title: URL
+                  description: 'The link URL for the sub-menu item.'
+                  default: '#'
+
+libraryOverrides:
+  dependencies:
+    - drupalx_theme/bootstrap-js

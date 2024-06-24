@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{% embed '@drupalx_theme/accordion/accordion-item.twig' with {
+  "item": {
+    "heading": content.field_title|render,
+    "accordion_instance": paragraph.id(),
+  },
+  "content": content
+} only %}
+  {% block accordion_content %}
+    {{ content.field_body }}
+    {{ content.field_link }}
+  {% endblock %}
+{% endembed %}

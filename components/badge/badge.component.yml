@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Badge
+description: 'Badge component following Drupal best practices.'
+props:
+  type: object
+  properties:
+    tag:
+      type: string
+      title: Tag
+      description: Define the badge content.
+      default: 'New feature'
+    modifier:
+      type: string
+      title: Modifier
+      description: Define the badge modifier.
+      default: 'text-bg-primary'

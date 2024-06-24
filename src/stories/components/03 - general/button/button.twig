@@ -1,8 +1,0 @@
-{{ attach_library('drupalx_theme/button') }}
-
-{% if button.url %}
-  <a href="{{ button.url }}" class="btn{{ button.modifier ? ' ' ~ button.modifier }} px-4 py-2" role="button">{{ button.text }} {% if button.icon %}<span class="material-symbols-outlined ms-1">{{ button.icon }}</span>{% endif %}</a>
-{% else %}
-<button class="btn{{ button.modifier ? ' ' ~ button.modifier }} px-4 py-2">{{ button.text }}</button>
-
-{% endif %}
