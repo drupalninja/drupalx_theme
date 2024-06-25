@@ -27,10 +27,6 @@
   }
 %}
 
-{%
-  set modifier = content.field_sidebyside_layout['#items'].getString()
-%}
-
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title_suffix }}
@@ -43,7 +39,8 @@
         body: content.field_summary,
         button: link,
         media: content.field_media,
-        modifier: modifier,
+        layout: content.field_sidebyside_layout['#items'].getString() ?? 'left',
+        modifier: '',
       } only
     %}
   {% endblock %}

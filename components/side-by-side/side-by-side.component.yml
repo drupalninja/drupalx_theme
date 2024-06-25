@@ -49,14 +49,19 @@ props:
           title: Modifier
           description: Additional classes for styling the button.
           default: 'btn-primary has-icon'
-    modifier:
+    layout:
       type: string
-      title: Modifier
+      title: layout
       description: Controls image left/right placement.
       enum:
         - 'left'
         - 'right'
       default: 'left'
+    modifier:
+      type: string
+      title: Modifier
+      description: Additional classes for styling the component.
+      default: ''
 
 libraryOverrides:
   dependencies:

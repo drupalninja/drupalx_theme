@@ -29,14 +29,19 @@ export default {
       description: 'Call to action.',
       control: 'object'
     },
-    modifier: {
-      name: 'Modifier',
+    layout: {
+      name: 'Layout',
       description: 'Controls image left/right placement.',
       control: 'select',
       options: {
         'Pin image left': 'left',
         'Pin image right': 'right'
       }
+    },
+    modifier: {
+      name: 'Modifier',
+      description: 'Additional classes for the component.',
+      control: 'text'
     }
   }
 };
@@ -54,7 +59,8 @@ Left.args = {
     icon: 'arrow_right_alt',
     modifier: 'btn-primary has-icon'
   },
-  modifier: 'left'
+  layout: 'left',
+  modifier: ''
 };
 
 export const Right = SideBySideTemplate.bind({});
@@ -70,5 +76,5 @@ Right.args = {
     icon: 'arrow_right_alt',
     modifier: 'btn-primary has-icon'
   },
-  modifier: 'right'
+  layout: 'right'
 };
