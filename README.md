@@ -17,13 +17,13 @@ The following commands will generate the new custom theme using the DrupalX star
 ```bash
 chmod +x core/scripts/drupal &&
 ddev exec --dir /var/www/html/web core/scripts/drupal generate-theme --starterkit=drupalx_theme nameoftheme
+ddev . drush cr
 ```
 
 Enable the new theme:
 ```bash
 ddev . drush theme:en nameoftheme
 ddev . drush config-set system.theme default -y nameoftheme
-ddev . drush cr
 ```
 
 ## Compiling Theme Assets
