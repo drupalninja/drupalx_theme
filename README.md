@@ -15,7 +15,7 @@ Public Storybook: https://drupalx.netlify.app/
 The following commands will generate the new custom theme using the DrupalX starter as the template:
 
 ```bash
-chmod +x core/scripts/drupal
+chmod +x core/scripts/drupal &&
 ddev exec --dir /var/www/html/web core/scripts/drupal generate-theme --starterkit=drupalx_theme nameoftheme
 ```
 
